@@ -1,0 +1,10 @@
+#!/bin/bash
+# openroad wrapper: OpenROAD needs OR-Tools' libortools.so.9 and the Qt/runtime
+# sysroot libs, but ORFS's UNSET_VARS deliberately unsets LD_LIBRARY_PATH
+# from the environment before invoking $(OPENROAD_EXE). A wrapper script
+# survives the unset because OPENROAD_EXE itself is preserved.
+CPU_TOP="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
+ORTOOLS_LIB="$CPU_TOP/tools/ortools914/or-tools_x86_64_Ubuntu-24.04_cpp_v9.14.6206/lib"
+SYSROOT_LIB="$CPU_TOP/tools/sysroot/usr/lib/x86_64-linux-gnu"
+export LD_LIBRARY_PATH="$ORTOOLS_LIB:$SYSROOT_LIB${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
+exec "$CPU_TOP/tools/openroad24/usr/bin/openroad" "$@"

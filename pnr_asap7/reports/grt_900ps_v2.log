@@ -1,0 +1,1336 @@
+make: Entering directory '/home/hatch/workspace/rv32imc-cpu/tools/orfs/flow'
+mkdir -p ./results/asap7/rv32imc_top/p900/
+echo 900 > ./results/asap7/rv32imc_top/p900/clock_period.txt
+/home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/scripts/synth.sh /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/scripts/synth_canonicalize.tcl ./logs/asap7/rv32imc_top/p900/1_1_yosys_canonicalize.log
+Using ABC area script.
+Extracting clock period from SDC file: ./results/asap7/rv32imc_top/p900/clock_period.txt
+Setting clock period to 900
+1. Executing Liberty frontend: /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_AO_RVT_FF_nldm_211120.lib.gz
+2. Executing Liberty frontend: /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_INVBUF_RVT_FF_nldm_220122.lib.gz
+3. Executing Liberty frontend: /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_OA_RVT_FF_nldm_211120.lib.gz
+4. Executing Liberty frontend: /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_SIMPLE_RVT_FF_nldm_211120.lib.gz
+5. Executing Liberty frontend: /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_SEQ_RVT_FF_nldm_220123.lib
+6. Executing Liberty frontend: /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_AO_RVT_FF_nldm_211120.lib.gz
+7. Executing Liberty frontend: /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_INVBUF_RVT_FF_nldm_220122.lib.gz
+8. Executing Liberty frontend: /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_OA_RVT_FF_nldm_211120.lib.gz
+9. Executing Liberty frontend: /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_SIMPLE_RVT_FF_nldm_211120.lib.gz
+10. Executing Liberty frontend: /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_SEQ_RVT_FF_nldm_220123.lib
+11. Executing Verilog-2005 frontend: /home/hatch/workspace/rv32imc-cpu/rtl/alu.v
+12. Executing Verilog-2005 frontend: /home/hatch/workspace/rv32imc-cpu/rtl/compressed_decoder.v
+13. Executing Verilog-2005 frontend: /home/hatch/workspace/rv32imc-cpu/rtl/csr.v
+14. Executing Verilog-2005 frontend: /home/hatch/workspace/rv32imc-cpu/rtl/mul_div.v
+15. Executing Verilog-2005 frontend: /home/hatch/workspace/rv32imc-cpu/rtl/regfile.v
+16. Executing Verilog-2005 frontend: /home/hatch/workspace/rv32imc-cpu/rtl/rv32imc_top.v
+17. Executing Verilog-2005 frontend: /home/hatch/workspace/rv32imc-cpu/rtl/tb_extended.v
+18. Executing Verilog-2005 frontend: /home/hatch/workspace/rv32imc-cpu/rtl/tb_smoke.v
+19. Executing Verilog-2005 frontend: /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/yoSys/cells_clkgate_R.v
+20. Executing HIERARCHY pass (managing design hierarchy).
+21. Executing AST frontend in derive mode using pre-parsed AST for module `\rv32imc_top'.
+21.1. Analyzing design hierarchy..
+21.2. Executing AST frontend in derive mode using pre-parsed AST for module `\csr'.
+21.3. Executing AST frontend in derive mode using pre-parsed AST for module `\divider'.
+21.4. Executing AST frontend in derive mode using pre-parsed AST for module `\multiplier'.
+21.5. Executing AST frontend in derive mode using pre-parsed AST for module `\alu'.
+21.6. Executing AST frontend in derive mode using pre-parsed AST for module `\regfile'.
+21.7. Executing AST frontend in derive mode using pre-parsed AST for module `\compressed_decoder'.
+21.8. Analyzing design hierarchy..
+21.9. Analyzing design hierarchy..
+22. Executing OPT_CLEAN pass (remove unused cells and wires).
+Warning: Ignoring module multiplier because it contains processes (run 'proc' command first).
+Warning: Ignoring module divider because it contains processes (run 'proc' command first).
+Warning: Ignoring module csr because it contains processes (run 'proc' command first).
+Warning: Ignoring module rv32imc_top because it contains processes (run 'proc' command first).
+Warning: Ignoring module compressed_decoder because it contains processes (run 'proc' command first).
+Warning: Ignoring module regfile because it contains processes (run 'proc' command first).
+Warning: Ignoring module alu because it contains processes (run 'proc' command first).
+23. Executing RTLIL backend.
+Warnings: 7 unique messages, 7 total
+End of script. Logfile hash: db63bf4103, time: 0.91s, user: 0.80s, system: 0.07s, MEM: 27.47 MB peak
+Yosys 0.69+75 (git sha1 f0b945f63-dirty, Release, Clang /usr/bin/clang++ 21.1.8)
+Time spent: 86% 12x read_liberty (0 sec), 6% 1x hierarchy (0 sec), ...
+Elapsed time: 0:00.95[h:]min:sec. CPU time: user 0.83 sys 0.09 (97%). Peak memory: 29888KB.
+Log                       Ext     Elapsed/s Peak Memory/MB sha1sum result [0:20)
+1_1_yosys_canonicalize    .rtlil          0             29 df53b69f4322b325e2c3
+/home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/scripts/synth.sh /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/scripts/synth.tcl ./logs/asap7/rv32imc_top/p900/1_2_yosys.log
+Using ABC area script.
+Extracting clock period from SDC file: ./results/asap7/rv32imc_top/p900/clock_period.txt
+Setting clock period to 900
+1. Executing RTLIL frontend.
+2. Executing HIERARCHY pass (managing design hierarchy).
+2.1. Analyzing design hierarchy..
+2.2. Analyzing design hierarchy..
+3. Executing SYNTH pass.
+3.1. Executing HIERARCHY pass (managing design hierarchy).
+3.1.1. Analyzing design hierarchy..
+3.1.2. Analyzing design hierarchy..
+3.2. Executing PROC pass (convert processes to netlists).
+3.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+3.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+3.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+3.2.4. Executing PROC_INIT pass (extract init attributes).
+3.2.5. Executing PROC_ARST pass (detect async resets in processes).
+3.2.6. Executing PROC_ROM pass (convert switches to ROMs).
+3.2.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+3.2.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+3.2.9. Executing PROC_DFF pass (convert process syncs to FFs).
+3.2.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+3.2.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+3.2.12. Executing OPT_EXPR pass (perform const folding).
+3.3. Executing CHECK pass (checking for obvious problems).
+3.4. Executing FLATTEN pass (flatten design).
+3.5. Executing OPT_EXPR pass (perform const folding).
+3.6. Executing CHECK pass (checking for obvious problems).
+3.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+3.8. Executing OPT pass (performing simple optimizations).
+3.8.1. Executing OPT_EXPR pass (perform const folding).
+3.8.2. Executing OPT_MERGE pass (detect identical cells).
+3.8.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+3.8.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+3.8.5. Executing OPT_MERGE pass (detect identical cells).
+3.8.6. Executing OPT_DFF pass (perform DFF optimizations).
+3.8.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+3.8.8. Executing OPT_EXPR pass (perform const folding).
+3.8.9. Rerunning OPT passes. (Maybe there is more to do..)
+3.8.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+3.8.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+3.8.12. Executing OPT_MERGE pass (detect identical cells).
+3.8.13. Executing OPT_DFF pass (perform DFF optimizations).
+3.8.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+3.8.15. Executing OPT_EXPR pass (perform const folding).
+3.8.16. Rerunning OPT passes. (Maybe there is more to do..)
+3.8.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+3.8.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+3.8.19. Executing OPT_MERGE pass (detect identical cells).
+3.8.20. Executing OPT_DFF pass (perform DFF optimizations).
+3.8.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+3.8.22. Executing OPT_EXPR pass (perform const folding).
+3.8.23. Finished fast OPT passes. (There is nothing left to do.)
+3.9. Executing FSM pass (extract and optimize FSM).
+3.9.1. Executing FSM_DETECT pass (finding FSMs in design).
+3.9.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+3.9.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+3.9.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+3.9.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+3.9.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+3.9.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+3.9.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+3.10. Executing OPT pass (performing simple optimizations).
+3.10.1. Executing OPT_EXPR pass (perform const folding).
+3.10.2. Executing OPT_MERGE pass (detect identical cells).
+3.10.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+3.10.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+3.10.5. Executing OPT_MERGE pass (detect identical cells).
+3.10.6. Executing OPT_DFF pass (perform DFF optimizations).
+3.10.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+3.10.8. Executing OPT_EXPR pass (perform const folding).
+3.10.9. Rerunning OPT passes. (Maybe there is more to do..)
+3.10.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+3.10.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+3.10.12. Executing OPT_MERGE pass (detect identical cells).
+3.10.13. Executing OPT_DFF pass (perform DFF optimizations).
+3.10.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+3.10.15. Executing OPT_EXPR pass (perform const folding).
+3.10.16. Rerunning OPT passes. (Maybe there is more to do..)
+3.10.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+3.10.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+3.10.19. Executing OPT_MERGE pass (detect identical cells).
+3.10.20. Executing OPT_DFF pass (perform DFF optimizations).
+3.10.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+3.10.22. Executing OPT_EXPR pass (perform const folding).
+3.10.23. Finished fast OPT passes. (There is nothing left to do.)
+3.11. Executing WREDUCE pass (reducing word size of cells).
+3.12. Executing PEEPOPT pass (run peephole optimizers).
+3.13. Executing OPT_CLEAN pass (remove unused cells and wires).
+3.14. Executing ALUMACC pass (create $alu and $macc cells).
+3.15. Executing SHARE pass (SAT-based resource sharing).
+3.16. Executing OPT pass (performing simple optimizations).
+3.16.1. Executing OPT_EXPR pass (perform const folding).
+3.16.2. Executing OPT_MERGE pass (detect identical cells).
+3.16.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+3.16.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+3.16.5. Executing OPT_MERGE pass (detect identical cells).
+3.16.6. Executing OPT_DFF pass (perform DFF optimizations).
+3.16.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+3.16.8. Executing OPT_EXPR pass (perform const folding).
+3.16.9. Rerunning OPT passes. (Maybe there is more to do..)
+3.16.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+3.16.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+3.16.12. Executing OPT_MERGE pass (detect identical cells).
+3.16.13. Executing OPT_DFF pass (perform DFF optimizations).
+3.16.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+3.16.15. Executing OPT_EXPR pass (perform const folding).
+3.16.16. Finished fast OPT passes. (There is nothing left to do.)
+3.17. Executing MEMORY pass.
+3.17.1. Executing OPT_MEM pass (optimize memories).
+3.17.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+3.17.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+3.17.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+3.17.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+3.17.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+3.17.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+3.17.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+3.17.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+3.17.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+3.18. Executing OPT_CLEAN pass (remove unused cells and wires).
+4. Executing SYNTH pass.
+4.1. Executing OPT pass (performing simple optimizations).
+4.1.1. Executing OPT_EXPR pass (perform const folding).
+4.1.2. Executing OPT_MERGE pass (detect identical cells).
+4.1.3. Executing OPT_DFF pass (perform DFF optimizations).
+4.1.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+4.1.5. Rerunning OPT passes. (Removed registers in this run.)
+4.1.6. Executing OPT_EXPR pass (perform const folding).
+4.1.7. Executing OPT_MERGE pass (detect identical cells).
+4.1.8. Executing OPT_DFF pass (perform DFF optimizations).
+4.1.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+4.1.10. Finished fast OPT passes.
+4.2. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+4.3. Executing OPT pass (performing simple optimizations).
+4.3.1. Executing OPT_EXPR pass (perform const folding).
+4.3.2. Executing OPT_MERGE pass (detect identical cells).
+4.3.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+4.3.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+4.3.5. Executing OPT_MERGE pass (detect identical cells).
+4.3.6. Executing OPT_SHARE pass.
+4.3.7. Executing OPT_DFF pass (perform DFF optimizations).
+4.3.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+4.3.9. Executing OPT_EXPR pass (perform const folding).
+4.3.10. Rerunning OPT passes. (Maybe there is more to do..)
+4.3.11. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+4.3.12. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+4.3.13. Executing OPT_MERGE pass (detect identical cells).
+4.3.14. Executing OPT_SHARE pass.
+4.3.15. Executing OPT_DFF pass (perform DFF optimizations).
+4.3.16. Executing OPT_CLEAN pass (remove unused cells and wires).
+4.3.17. Executing OPT_EXPR pass (perform const folding).
+4.3.18. Rerunning OPT passes. (Maybe there is more to do..)
+4.3.19. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+4.3.20. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+4.3.21. Executing OPT_MERGE pass (detect identical cells).
+4.3.22. Executing OPT_SHARE pass.
+4.3.23. Executing OPT_DFF pass (perform DFF optimizations).
+4.3.24. Executing OPT_CLEAN pass (remove unused cells and wires).
+4.3.25. Executing OPT_EXPR pass (perform const folding).
+4.3.26. Rerunning OPT passes. (Maybe there is more to do..)
+4.3.27. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+4.3.28. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+4.3.29. Executing OPT_MERGE pass (detect identical cells).
+4.3.30. Executing OPT_SHARE pass.
+4.3.31. Executing OPT_DFF pass (perform DFF optimizations).
+4.3.32. Executing OPT_CLEAN pass (remove unused cells and wires).
+4.3.33. Executing OPT_EXPR pass (perform const folding).
+4.3.34. Finished fast OPT passes. (There is nothing left to do.)
+4.4. Executing TECHMAP pass (map to technology primitives).
+4.4.1. Executing Verilog-2005 frontend: /home/hatch/workspace/rv32imc-cpu/tools/oss-cad-suite/lib/../share/yosys/techmap.v
+4.4.2. Executing Verilog-2005 frontend: /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/common/lcu_kogge_stone.v
+4.4.3. Continuing TECHMAP pass.
+4.4.61. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+4.4.62. Executing OPT_EXPR pass (perform const folding).
+4.5. Executing OPT pass (performing simple optimizations).
+4.5.1. Executing OPT_EXPR pass (perform const folding).
+4.5.2. Executing OPT_MERGE pass (detect identical cells).
+4.5.3. Executing OPT_DFF pass (perform DFF optimizations).
+4.5.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+4.5.5. Rerunning OPT passes. (Removed registers in this run.)
+4.5.6. Executing OPT_EXPR pass (perform const folding).
+4.5.7. Executing OPT_MERGE pass (detect identical cells).
+4.5.8. Executing OPT_DFF pass (perform DFF optimizations).
+4.5.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+4.5.10. Finished fast OPT passes.
+4.6. Executing HIERARCHY pass (managing design hierarchy).
+4.6.1. Analyzing design hierarchy..
+4.6.2. Analyzing design hierarchy..
+4.7. Printing statistics.
+4.8. Executing CHECK pass (checking for obvious problems).
+5. Executing OPT pass (performing simple optimizations).
+5.1. Executing OPT_EXPR pass (perform const folding).
+5.2. Executing OPT_MERGE pass (detect identical cells).
+5.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+5.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+5.5. Executing OPT_MERGE pass (detect identical cells).
+5.6. Executing OPT_DFF pass (perform DFF optimizations).
+5.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+5.8. Executing OPT_EXPR pass (perform const folding).
+5.9. Rerunning OPT passes. (Maybe there is more to do..)
+5.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+5.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+5.12. Executing OPT_MERGE pass (detect identical cells).
+5.13. Executing OPT_DFF pass (perform DFF optimizations).
+5.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+5.15. Executing OPT_EXPR pass (perform const folding).
+5.16. Finished fast OPT passes. (There is nothing left to do.)
+6. Executing EXTRACT_FA pass (find and extract full/half adders).
+7. Executing TECHMAP pass (map to technology primitives).
+7.1. Executing Verilog-2005 frontend: /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/yoSys/cells_adders_R.v
+7.2. Continuing TECHMAP pass.
+8. Executing TECHMAP pass (map to technology primitives).
+8.1. Executing Verilog-2005 frontend: /home/hatch/workspace/rv32imc-cpu/tools/oss-cad-suite/lib/../share/yosys/techmap.v
+8.2. Continuing TECHMAP pass.
+9. Executing OPT pass (performing simple optimizations).
+9.1. Executing OPT_EXPR pass (perform const folding).
+9.2. Executing OPT_MERGE pass (detect identical cells).
+9.3. Executing OPT_DFF pass (perform DFF optimizations).
+9.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+9.5. Finished fast OPT passes.
+10. Executing DFFLEGALIZE pass (convert FFs and LATCHes to types supported by the target).
+11. Executing TECHMAP pass (map to technology primitives).
+11.1. Executing Verilog-2005 frontend: /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/yoSys/cells_latch_R.v
+11.2. Continuing TECHMAP pass.
+12. Executing DFFLIBMAP pass (mapping DFF/DLATCH cells to sequential cells from liberty file).
+12.1. Executing DFFLEGALIZE pass (convert FFs and LATCHes to types supported by the target).
+13. Executing OPT pass (performing simple optimizations).
+13.1. Executing OPT_EXPR pass (perform const folding).
+13.2. Executing OPT_MERGE pass (detect identical cells).
+13.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+13.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+13.5. Executing OPT_MERGE pass (detect identical cells).
+13.6. Executing OPT_DFF pass (perform DFF optimizations).
+13.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+13.8. Executing OPT_EXPR pass (perform const folding).
+13.9. Rerunning OPT passes. (Maybe there is more to do..)
+13.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+13.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+13.12. Executing OPT_MERGE pass (detect identical cells).
+13.13. Executing OPT_DFF pass (perform DFF optimizations).
+13.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+13.15. Executing OPT_EXPR pass (perform const folding).
+13.16. Finished fast OPT passes. (There is nothing left to do.)
+14. Executing SETUNDEF pass (replace undef values with defined constants).
+abc -script /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/scripts/abc_area.script -liberty /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_AO_RVT_FF_nldm_211120.lib.gz -liberty /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_INVBUF_RVT_FF_nldm_220122.lib.gz -liberty /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_OA_RVT_FF_nldm_211120.lib.gz -liberty /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_SIMPLE_RVT_FF_nldm_211120.lib.gz -liberty /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_SEQ_RVT_FF_nldm_220123.lib -dont_use *x1p*_ASAP7* -dont_use *xp*_ASAP7* -dont_use SDF* -dont_use ICG* -constr ./objects/asap7/rv32imc_top/p900/abc.constr -D 900
+15. Executing ABC pass (technology mapping using ABC).
+15.1. Summary of detected clock domains:
+15.2. Extracting gate netlist of module `\rv32imc_top' to `<abc-temp-dir>/input.blif'..
+15.2.1. Executed ABC.
+15.2.2. Re-integrating ABC results.
+Took 21 seconds: abc -script /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/scripts/abc_area.script -liberty /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_AO_RVT_FF_nldm_211120.lib.gz -liberty /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_INVBUF_RVT_FF_nldm_220122.lib.gz -liberty /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_OA_RVT_FF_nldm_211120.lib.gz -liberty /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_SIMPLE_RVT_FF_nldm_211120.lib.gz -liberty /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_SEQ_RVT_FF_nldm_220123.lib -dont_use *x1p*_ASAP7* -dont_use *xp*_ASAP7* -dont_use SDF* -dont_use ICG* -constr ./objects/asap7/rv32imc_top/p900/abc.constr -D 900
+16. Executing SPLITNETS pass (splitting up multi-bit signals).
+17. Executing OPT_CLEAN pass (remove unused cells and wires).
+18. Executing HILOMAP pass (mapping to constant drivers).
+19. Executing INSBUF pass (insert buffer cells for connected wires).
+20. Executing CHECK pass (checking for obvious problems).
+21. Printing statistics.
+22. Executing CHECK pass (checking for obvious problems).
+23. Executing Verilog backend.
+23.1. Executing BMUXMAP pass.
+23.2. Executing DEMUXMAP pass.
+End of script. Logfile hash: 261eb1e711, time: 42.86s, user: 22.09s, system: 1.23s, MEM: 209.38 MB peak
+Yosys 0.69+75 (git sha1 f0b945f63-dirty, Release, Clang /usr/bin/clang++ 21.1.8)
+Time spent: 47% 1x abc (20 sec), 16% 1x extract_fa (7 sec), ...
+Elapsed time: 0:43.00[h:]min:sec. CPU time: user 41.63 sys 1.68 (100%). Peak memory: 289008KB.
+Log                       Ext     Elapsed/s Peak Memory/MB sha1sum result [0:20)
+1_2_yosys                 .v             43            282 7a434de8b2bb78b4fffe
+cp /home/hatch/workspace/rv32imc-cpu/pnr_asap7/design/rv32imc_top//constraint.sdc results/asap7/rv32imc_top/p900/1_2_yosys.sdc
+touch -r /home/hatch/workspace/rv32imc-cpu/pnr_asap7/design/rv32imc_top//constraint.sdc results/asap7/rv32imc_top/p900/1_2_yosys.sdc
+OpenROAD 26Q2-1164-g08f67ee5ec 
+Features included (+) or not (-): +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 2 thread(s).
+mkdir -p ./objects/asap7/rv32imc_top/p900
+/home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/scripts/flow.sh 1_synth synth_odb
+Running synth_odb.tcl, stage 1_synth
+source /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/liberty_suppressions.tcl
+read_liberty /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_AO_RVT_FF_nldm_211120.lib.gz
+read_liberty /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_INVBUF_RVT_FF_nldm_220122.lib.gz
+read_liberty /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_OA_RVT_FF_nldm_211120.lib.gz
+read_liberty /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_SIMPLE_RVT_FF_nldm_211120.lib.gz
+read_liberty /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_SEQ_RVT_FF_nldm_220123.lib
+[INFO ODB-0227] LEF file: /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/lef/asap7_tech_1x_201209.lef, created 30 layers, 9 vias
+[INFO ODB-0227] LEF file: /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/lef/asap7sc7p5t_28_R_1x_220121a.lef, created 212 library cells
+link_design rv32imc_top
+read_sdc ./results/asap7/rv32imc_top/p900/1_2_yosys.sdc
+source /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/setRC.tcl
+eliminate_dead_logic
+Removed 0 unused instances and 0 unused nets.
+Design area 3396 um^2 100% utilization.
+write_db ./results/asap7/rv32imc_top/p900/1_synth.odb
+write_sdc -no_timestamp ./results/asap7/rv32imc_top/p900/1_synth.sdc
+Elapsed time: 0:04.07[h:]min:sec. CPU time: user 3.63 sys 0.36 (98%). Peak memory: 269440KB.
+Log                       Ext     Elapsed/s Peak Memory/MB sha1sum result [0:20)
+1_synth                   .odb            4            263 8073f72d4e02cb27666b
+1_synth                   .sdc                             0f541d244ae0d87621e0
+/home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/scripts/flow.sh 2_1_floorplan floorplan
+Running floorplan.tcl, stage 2_1_floorplan
+source /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/liberty_suppressions.tcl
+read_liberty /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_AO_RVT_FF_nldm_211120.lib.gz
+read_liberty /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_INVBUF_RVT_FF_nldm_220122.lib.gz
+read_liberty /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_OA_RVT_FF_nldm_211120.lib.gz
+read_liberty /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_SIMPLE_RVT_FF_nldm_211120.lib.gz
+read_liberty /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_SEQ_RVT_FF_nldm_220123.lib
+read_db ./results/asap7/rv32imc_top/p900/1_synth.odb
+read_sdc ./results/asap7/rv32imc_top/p900/1_synth.sdc
+source /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/setRC.tcl
+
+==========================================================================
+Floorplan check_setup
+--------------------------------------------------------------------------
+Warning: There is 1 input port missing set_input_delay.
+number instances in verilog is 29834
+initialize_floorplan -utilization 45 -aspect_ratio 1 -core_space 2 -site asap7sc7p5t
+[INFO IFP-0107] Defining die area using utilization: 45.00% and aspect ratio: 1.
+[WARNING IFP-0028] Core area lower left (2.000, 2.000) snapped to (2.052, 2.160).
+[INFO IFP-0001] Added 321 rows of 1607 site asap7sc7p5t.
+[INFO IFP-0100] Die BBox:  (  0.000  0.000 ) ( 90.870 90.870 ) um
+[INFO IFP-0101] Core BBox: (  2.052  2.160 ) ( 88.830 88.830 ) um
+[INFO IFP-0102] Core area:                         7521.049 um^2
+[INFO IFP-0103] Total instances area:              3395.915 um^2
+[INFO IFP-0104] Effective utilization:                0.452
+[INFO IFP-0105] Number of instances:                  29834
+source /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/openRoad/make_tracks.tcl
+source /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/fastroute.tcl
+set_dont_use "*x1p*_ASAP7* *xp*_ASAP7* SDF* ICG*"
+repair_tie_fanout -separation 0 asap7sc7p5t_SIMPLE_RVT_FF_nldm_250407/TIELOx1_ASAP7_75t_R/L
+[INFO RSZ-0042] Inserted 2 tie TIELOx1_ASAP7_75t_R instances.
+repair_tie_fanout -separation 0 asap7sc7p5t_SIMPLE_RVT_FF_nldm_250407/TIEHIx1_ASAP7_75t_R/H
+[INFO RSZ-0042] Inserted 748 tie TIEHIx1_ASAP7_75t_R instances.
+repair_timing -setup_margin 0 -hold_margin 0 -repair_tns 100 -setup -skip_last_gasp -sequence unbuffer,sizeup,swap,vt_swap -verbose
+[WARNING EST-0027] no estimated parasitics. Using wire load models.
+[INFO RSZ-0100] Repair move sequence: UnbufferMove SizeUpMove SwapPinsMove 
+[INFO RSZ-0094] Found 13 endpoints with setup violations.
+[INFO RSZ-0099] Repairing 13 out of 13 (100.00%) violating endpoints...
+   Iter   | Removed | Resized | Inserted | Cloned |  Pin  |   Area   |    WNS   |   StTNS    |   EnTNS    |  Viol  |  Worst  
+          | Buffers |  Gates  | Buffers  |  Gates | Swaps |          |          |            |            | Endpts | St/EnPt 
+------------------------------------------------------------------------------------------------------------------------------
+       0* |       0 |       0 |        0 |      0 |     0 |    +0.0% |  -65.222 |     -195.1 |     -433.2 |     13 | u_mul.result\[28\]$_DFFE_PN0P_/D
+       6* |       0 |       3 |        0 |      0 |     2 |    +0.0% |    2.314 |        0.0 |        0.0 |     13 | u_mul.result\[28\]$_DFFE_PN0P_/D
+       7* |       0 |       3 |        0 |      0 |     2 |    +0.0% |    2.314 |        0.0 |        0.0 |     13 | u_mul.result\[28\]$_DFFE_PN0P_/D
+       8* |       0 |       3 |        0 |      0 |     2 |    +0.0% |    2.314 |        0.0 |        0.0 |     13 | u_mul.result\[28\]$_DFFE_PN0P_/D
+       9* |       0 |       3 |        0 |      0 |     2 |    +0.0% |    2.314 |        0.0 |        0.0 |     13 | u_mul.result\[28\]$_DFFE_PN0P_/D
+      10* |       0 |       3 |        0 |      0 |     2 |    +0.0% |    2.314 |        0.0 |        0.0 |     13 | u_mul.result\[28\]$_DFFE_PN0P_/D
+      10* |       0 |       3 |        0 |      0 |     2 |    +0.0% |    2.314 |        0.0 |        0.0 |     13 | u_mul.result\[28\]$_DFFE_PN0P_/D
+      11* |       0 |       3 |        0 |      0 |     2 |    +0.0% |    2.314 |        0.0 |        0.0 |     13 | u_mul.result\[28\]$_DFFE_PN0P_/D
+      12* |       0 |       3 |        0 |      0 |     2 |    +0.0% |    2.314 |        0.0 |        0.0 |     13 | u_mul.result\[28\]$_DFFE_PN0P_/D
+      13* |       0 |       3 |        0 |      0 |     2 |    +0.0% |    2.314 |        0.0 |        0.0 |     13 | u_mul.result\[28\]$_DFFE_PN0P_/D
+      14* |       0 |       3 |        0 |      0 |     2 |    +0.0% |    2.314 |        0.0 |        0.0 |     13 | u_mul.result\[28\]$_DFFE_PN0P_/D
+      15* |       0 |       3 |        0 |      0 |     2 |    +0.0% |    2.314 |        0.0 |        0.0 |     13 | u_mul.result\[28\]$_DFFE_PN0P_/D
+      16* |       0 |       3 |        0 |      0 |     2 |    +0.0% |    2.314 |        0.0 |        0.0 |     13 | u_mul.result\[28\]$_DFFE_PN0P_/D
+      17* |       0 |       3 |        0 |      0 |     2 |    +0.0% |    2.314 |        0.0 |        0.0 |     13 | u_mul.result\[28\]$_DFFE_PN0P_/D
+      18* |       0 |       3 |        0 |      0 |     2 |    +0.0% |    2.314 |        0.0 |        0.0 |     13 | u_mul.result\[28\]$_DFFE_PN0P_/D
+      18* |       0 |       3 |        0 |      0 |     2 |    +0.0% |    2.314 |        0.0 |        0.0 |     13 | u_mul.result\[28\]$_DFFE_PN0P_/D
+    final |       0 |       3 |        0 |      0 |     2 |    +0.0% |    2.314 |        0.0 |        0.0 |      0 | u_mul.result\[28\]$_DFFE_PN0P_/D
+------------------------------------------------------------------------------------------------------------------------------
+[INFO RSZ-0051] Resized 3 instances: 3 up, 0 up match, 0 down, 0 VT
+[INFO RSZ-0043] Swapped pins on 2 instances.
+Default units for flow
+ time 1ps
+ capacitance 1fF
+ resistance 1kohm
+ voltage 1v
+ current 1mA
+ power 1pW
+ distance 1um
+   Layer   | Unit Resistance | Unit Capacitance 
+           |       (kohm/um) |          (fF/um)
+------------------------------------------------
+        M1 |        7.04e-02 |         1.00e-10
+        M2 |        2.97e-02 |         1.75e-01
+        M3 |        3.13e-02 |         1.56e-01
+        M4 |        1.80e-02 |         1.78e-01
+        M5 |        1.90e-02 |         1.64e-01
+        M6 |        1.19e-02 |         1.87e-01
+        M7 |        1.25e-02 |         1.63e-01
+        M8 |        8.45e-03 |         1.04e-01
+        M9 |        8.90e-03 |         9.28e-02
+       Pad |        0.00e+00 |         0.00e+00
+------------------------------------------------
+
+   Layer   | Via Resistance 
+           |         (kohm) 
+----------------------------
+        V1 |       1.72e-02 
+        V2 |       1.72e-02 
+        V3 |       1.72e-02 
+        V4 |       1.18e-02 
+        V5 |       1.18e-02 
+        V6 |       8.20e-03 
+        V7 |       8.20e-03 
+        V8 |       6.30e-03 
+        V9 |       6.30e-03 
+----------------------------
+Report metrics stage 2, floorplan final...
+
+==========================================================================
+floorplan final report_design_area
+--------------------------------------------------------------------------
+Design area 3429 um^2 46% utilization.
+write_db ./results/asap7/rv32imc_top/p900/2_1_floorplan.odb
+write_sdc -no_timestamp ./results/asap7/rv32imc_top/p900/2_1_floorplan.sdc
+Elapsed time: 0:17.72[h:]min:sec. CPU time: user 16.44 sys 2.47 (106%). Peak memory: 330216KB.
+Log                       Ext     Elapsed/s Peak Memory/MB sha1sum result [0:20)
+2_1_floorplan             .odb           17            322 1762f245951f49aad1d6
+2_1_floorplan             .sdc                             0f541d244ae0d87621e0
+/home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/scripts/flow.sh 2_2_floorplan_macro macro_place
+Running macro_place.tcl, stage 2_2_floorplan_macro
+source /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/liberty_suppressions.tcl
+read_liberty /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_AO_RVT_FF_nldm_211120.lib.gz
+read_liberty /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_INVBUF_RVT_FF_nldm_220122.lib.gz
+read_liberty /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_OA_RVT_FF_nldm_211120.lib.gz
+read_liberty /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_SIMPLE_RVT_FF_nldm_211120.lib.gz
+read_liberty /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_SEQ_RVT_FF_nldm_220123.lib
+read_db ./results/asap7/rv32imc_top/p900/2_1_floorplan.odb
+read_sdc ./results/asap7/rv32imc_top/p900/2_1_floorplan.sdc
+source /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/setRC.tcl
+No macros found: Skipping macro_placement
+Design area 3429 um^2 46% utilization.
+write_db ./results/asap7/rv32imc_top/p900/2_2_floorplan_macro.odb
+Elapsed time: 0:03.29[h:]min:sec. CPU time: user 2.88 sys 0.37 (98%). Peak memory: 242008KB.
+Log                       Ext     Elapsed/s Peak Memory/MB sha1sum result [0:20)
+2_2_floorplan_macro       .odb            3            236 1762f245951f49aad1d6
+/home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/scripts/flow.sh 2_3_floorplan_tapcell tapcell
+Running tapcell.tcl, stage 2_3_floorplan_tapcell
+source /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/liberty_suppressions.tcl
+read_liberty /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_AO_RVT_FF_nldm_211120.lib.gz
+read_liberty /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_INVBUF_RVT_FF_nldm_220122.lib.gz
+read_liberty /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_OA_RVT_FF_nldm_211120.lib.gz
+read_liberty /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_SIMPLE_RVT_FF_nldm_211120.lib.gz
+read_liberty /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_SEQ_RVT_FF_nldm_220123.lib
+read_db ./results/asap7/rv32imc_top/p900/2_2_floorplan_macro.odb
+read_sdc ./results/asap7/rv32imc_top/p900/2_1_floorplan.sdc
+source /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/setRC.tcl
+Tap and End Cap cell insertion
+  TAP Cell          : TAPCELL_ASAP7_75t_R
+  ENDCAP Cell       : TAPCELL_ASAP7_75t_R
+  Halo Around Macro : 2 2
+  TAP Cell Distance : 25
+[INFO TAP-0004] Inserted 642 endcaps.
+[INFO TAP-0005] Inserted 484 tapcells.
+Design area 3462 um^2 46% utilization.
+write_db ./results/asap7/rv32imc_top/p900/2_3_floorplan_tapcell.odb
+Elapsed time: 0:03.20[h:]min:sec. CPU time: user 2.81 sys 0.32 (98%). Peak memory: 224468KB.
+Log                       Ext     Elapsed/s Peak Memory/MB sha1sum result [0:20)
+2_3_floorplan_tapcell     .odb            3            219 5daa7c426cece51715ea
+/home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/scripts/flow.sh 2_4_floorplan_pdn pdn
+Running pdn.tcl, stage 2_4_floorplan_pdn
+source /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/liberty_suppressions.tcl
+read_liberty /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_AO_RVT_FF_nldm_211120.lib.gz
+read_liberty /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_INVBUF_RVT_FF_nldm_220122.lib.gz
+read_liberty /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_OA_RVT_FF_nldm_211120.lib.gz
+read_liberty /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_SIMPLE_RVT_FF_nldm_211120.lib.gz
+read_liberty /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_SEQ_RVT_FF_nldm_220123.lib
+read_db ./results/asap7/rv32imc_top/p900/2_3_floorplan_tapcell.odb
+read_sdc ./results/asap7/rv32imc_top/p900/2_1_floorplan.sdc
+source /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/setRC.tcl
+[INFO PDN-0001] Inserting grid: top
+Design area 3462 um^2 46% utilization.
+write_db ./results/asap7/rv32imc_top/p900/2_4_floorplan_pdn.odb
+Elapsed time: 0:03.71[h:]min:sec. CPU time: user 3.21 sys 0.36 (96%). Peak memory: 248896KB.
+Log                       Ext     Elapsed/s Peak Memory/MB sha1sum result [0:20)
+2_4_floorplan_pdn         .odb            3            243 62570aea64e34800bcfc
+cp ./results/asap7/rv32imc_top/p900/2_4_floorplan_pdn.odb ./results/asap7/rv32imc_top/p900/2_floorplan.odb
+cp ./results/asap7/rv32imc_top/p900/2_1_floorplan.sdc ./results/asap7/rv32imc_top/p900/2_floorplan.sdc
+/home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/scripts/flow.sh 3_1_place_gp_skip_io global_place_skip_io
+Running global_place_skip_io.tcl, stage 3_1_place_gp_skip_io
+source /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/liberty_suppressions.tcl
+read_liberty /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_AO_RVT_FF_nldm_211120.lib.gz
+read_liberty /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_INVBUF_RVT_FF_nldm_220122.lib.gz
+read_liberty /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_OA_RVT_FF_nldm_211120.lib.gz
+read_liberty /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_SIMPLE_RVT_FF_nldm_211120.lib.gz
+read_liberty /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_SEQ_RVT_FF_nldm_220123.lib
+read_db ./results/asap7/rv32imc_top/p900/2_floorplan.odb
+read_sdc ./results/asap7/rv32imc_top/p900/2_floorplan.sdc
+source /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/setRC.tcl
+global_placement -skip_io -density 0.6 -pad_left 0 -pad_right 0
+[INFO GPL-0001] ---- Initialize GPL Main Data Structures
+[INFO GPL-0002] DBU: 1000
+[INFO GPL-0003] SiteSize: (  0.054  0.270 ) um
+[INFO GPL-0004] CoreBBox: (  2.052  2.160 ) ( 88.830 88.830 ) um
+[INFO GPL-0036] Movable instances area:       3428.677 um^2
+[INFO GPL-0037] Total instances area:         3461.511 um^2
+[INFO GPL-0035] Pin density area adjust:       259.244 um^2
+[INFO GPL-0032] ---- Initialize Region: Top-level
+[INFO GPL-0006] Number of instances:             31708
+[INFO GPL-0007] Movable instances:               30582
+[INFO GPL-0008] Fixed instances:                  1126
+[INFO GPL-0009] Dummy instances:                     0
+[INFO GPL-0010] Number of nets:                  33761
+[INFO GPL-0011] Number of pins:                  98871
+[INFO GPL-0012] Die BBox:  (  0.000  0.000 ) ( 90.870 90.870 ) um
+[INFO GPL-0013] Core BBox: (  2.052  2.160 ) ( 88.830 88.830 ) um
+[INFO GPL-0016] Core area:                    7521.049 um^2
+[INFO GPL-0014] Region name: top-level.
+[INFO GPL-0015] Region area:                  7521.049 um^2
+[INFO GPL-0017] Fixed instances area:           32.834 um^2
+[INFO GPL-0018] Movable instances area:       3687.921 um^2
+[INFO GPL-0019] Utilization:                    49.250 %
+[INFO GPL-0020] Standard cells area:          3687.921 um^2
+[INFO GPL-0021] Large instances area:            0.000 um^2
+[INFO GPL-0005] ---- Execute Conjugate Gradient Initial Placement.
+[INFO GPL-0051] Source of initial instance position counters:
+	Odb location = 0	Core center = 30582	Region center = 0
+[INFO GPL-0033] ---- Initialize Nesterov Region: Top-level
+[INFO GPL-0023] Placement target density:       0.6000
+[INFO GPL-0024] Movable insts average area:      0.121 um^2
+[INFO GPL-0025] Ideal bin area:                  0.201 um^2
+[INFO GPL-0026] Ideal bin count:                 37420
+[INFO GPL-0027] Total bin area:               7521.049 um^2
+[INFO GPL-0028] Bin count (X, Y):         128 ,    128
+[INFO GPL-0029] Bin size (W * H):       0.678 *  0.677 um
+[INFO GPL-0030] Number of bins:                  16384
+[INFO GPL-0084] ---- Execute Nesterov Global Placement.
+[INFO GPL-0031] HPWL: Half-Perimeter Wirelength
+Iteration | Overflow |     HPWL (um) |  HPWL(%) |   Penalty | Group
+---------------------------------------------------------------
+        0 |   0.9961 |  2.297669e+04 |   +0.00% |  8.26e-14 |      
+       10 |   0.9971 |  5.512098e+03 |  -76.01% |  1.35e-13 |      
+       20 |   0.9971 |  5.129455e+03 |   -6.94% |  2.19e-13 |      
+       30 |   0.9971 |  5.038994e+03 |   -1.76% |  3.57e-13 |      
+       40 |   0.9971 |  4.999763e+03 |   -0.78% |  5.82e-13 |      
+       50 |   0.9970 |  4.985290e+03 |   -0.29% |  9.48e-13 |      
+       60 |   0.9969 |  4.986119e+03 |   +0.02% |  1.54e-12 |      
+       70 |   0.9968 |  5.004979e+03 |   +0.38% |  2.51e-12 |      
+       80 |   0.9967 |  5.065320e+03 |   +1.21% |  4.10e-12 |      
+       90 |   0.9967 |  5.240433e+03 |   +3.46% |  6.67e-12 |      
+      100 |   0.9963 |  5.677813e+03 |   +8.35% |  1.09e-11 |      
+      110 |   0.9955 |  6.482239e+03 |  +14.17% |  1.77e-11 |      
+      120 |   0.9942 |  7.882171e+03 |  +21.60% |  2.88e-11 |      
+      130 |   0.9917 |  9.824564e+03 |  +24.64% |  4.69e-11 |      
+      140 |   0.9876 |  1.216037e+04 |  +23.78% |  7.64e-11 |      
+      150 |   0.9826 |  1.514495e+04 |  +24.54% |  1.24e-10 |      
+      160 |   0.9751 |  1.915544e+04 |  +26.48% |  2.03e-10 |      
+      170 |   0.9637 |  2.384395e+04 |  +24.48% |  3.30e-10 |      
+      180 |   0.9489 |  2.879397e+04 |  +20.76% |  5.37e-10 |      
+      190 |   0.9305 |  3.440153e+04 |  +19.47% |  8.75e-10 |      
+      200 |   0.9074 |  3.964232e+04 |  +15.23% |  1.42e-09 |      
+      210 |   0.8801 |  4.577416e+04 |  +15.47% |  2.32e-09 |      
+      220 |   0.8494 |  5.216393e+04 |  +13.96% |  3.77e-09 |      
+      230 |   0.8157 |  5.859289e+04 |  +12.32% |  6.14e-09 |      
+      240 |   0.7806 |  6.533593e+04 |  +11.51% |  9.99e-09 |      
+      250 |   0.7428 |  7.176722e+04 |   +9.84% |  1.63e-08 |      
+      260 |   0.7015 |  7.814165e+04 |   +8.88% |  2.65e-08 |      
+      270 |   0.6570 |  8.408627e+04 |   +7.61% |  4.31e-08 |      
+      280 |   0.6101 |  8.949877e+04 |   +6.44% |  7.02e-08 |      
+      290 |   0.5610 |  9.417908e+04 |   +5.23% |  1.14e-07 |      
+      300 |   0.5075 |  9.903212e+04 |   +5.15% |  1.86e-07 |      
+      310 |   0.4523 |  1.028677e+05 |   +3.87% |  3.03e-07 |      
+      320 |   0.3963 |  1.055677e+05 |   +2.62% |  4.93e-07 |      
+      330 |   0.3476 |  1.073626e+05 |   +1.70% |  8.03e-07 |      
+      340 |   0.3083 |  1.087873e+05 |   +1.33% |  1.19e-06 |      
+      350 |   0.2788 |  1.096180e+05 |   +0.76% |  1.76e-06 |      
+      360 |   0.2459 |  1.102282e+05 |   +0.56% |  2.59e-06 |      
+      370 |   0.2165 |  1.109554e+05 |   +0.66% |  3.82e-06 |      
+      380 |   0.1894 |  1.111706e+05 |   +0.19% |  5.63e-06 |      
+      390 |   0.1665 |  1.114525e+05 |   +0.25% |  8.29e-06 |      
+      400 |   0.1448 |  1.115737e+05 |   +0.11% |  1.22e-05 |      
+      410 |   0.1245 |  1.116427e+05 |   +0.06% |  1.80e-05 |      
+      420 |   0.1076 |  1.117188e+05 |   +0.07% |  2.65e-05 |      
+      425 |   0.0994 |  1.117573e+05 |          |  3.34e-05 |      
+---------------------------------------------------------------
+[INFO GPL-1001] Global placement finished at iteration 425
+[INFO GPL-1002] Placed Cell Area             3687.9206
+[INFO GPL-1003] Available Free Area          7488.2151
+[INFO GPL-1004] Minimum Feasible Density        0.5000 (cell_area / free_area)
+[INFO GPL-1006]   Suggested Target Densities:
+[INFO GPL-1007]     - For 90% usage of free space: 0.5472
+[INFO GPL-1008]     - For 80% usage of free space: 0.6156
+[INFO GPL-1009]     - For 50% usage of free space: 0.9850
+[INFO GPL-1014] Final placement area: 3687.92 (+0.00%)
+Took 15 seconds: global_placement -skip_io -density 0.6 -pad_left 0 -pad_right 0
+Design area 3462 um^2 46% utilization.
+write_db ./results/asap7/rv32imc_top/p900/3_1_place_gp_skip_io.odb
+Elapsed time: 0:18.93[h:]min:sec. CPU time: user 24.96 sys 0.43 (134%). Peak memory: 283848KB.
+Log                       Ext     Elapsed/s Peak Memory/MB sha1sum result [0:20)
+3_1_place_gp_skip_io      .odb           18            277 11436d92cf0d758697fe
+/home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/scripts/flow.sh 3_2_place_iop io_placement
+Running io_placement.tcl, stage 3_2_place_iop
+source /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/liberty_suppressions.tcl
+read_liberty /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_AO_RVT_FF_nldm_211120.lib.gz
+read_liberty /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_INVBUF_RVT_FF_nldm_220122.lib.gz
+read_liberty /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_OA_RVT_FF_nldm_211120.lib.gz
+read_liberty /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_SIMPLE_RVT_FF_nldm_211120.lib.gz
+read_liberty /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_SEQ_RVT_FF_nldm_220123.lib
+read_db ./results/asap7/rv32imc_top/p900/3_1_place_gp_skip_io.odb
+read_sdc ./results/asap7/rv32imc_top/p900/2_floorplan.sdc
+source /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/setRC.tcl
+place_pins -hor_layers M4 -ver_layers M5
+Found 0 macro blocks.
+Using 2 tracks default min distance between IO pins.
+[INFO PPL-0001] Number of available slots 3724
+[INFO PPL-0002] Number of I/O             232
+[INFO PPL-0003] Number of I/O w/sink      232
+[INFO PPL-0004] Number of I/O w/o sink    0
+[INFO PPL-0005] Slots per section         200
+[INFO PPL-0008] Successfully assigned pins to sections.
+[INFO PPL-0012] I/O nets HPWL: 6429.94 um.
+Design area 3462 um^2 46% utilization.
+write_db ./results/asap7/rv32imc_top/p900/3_2_place_iop.odb
+Elapsed time: 0:03.32[h:]min:sec. CPU time: user 2.84 sys 0.35 (95%). Peak memory: 244912KB.
+Log                       Ext     Elapsed/s Peak Memory/MB sha1sum result [0:20)
+3_2_place_iop             .odb            3            239 e6142ecf6cb23f5c7930
+/home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/scripts/flow.sh 3_3_place_gp global_place
+Running global_place.tcl, stage 3_3_place_gp
+source /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/liberty_suppressions.tcl
+read_liberty /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_AO_RVT_FF_nldm_211120.lib.gz
+read_liberty /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_INVBUF_RVT_FF_nldm_220122.lib.gz
+read_liberty /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_OA_RVT_FF_nldm_211120.lib.gz
+read_liberty /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_SIMPLE_RVT_FF_nldm_211120.lib.gz
+read_liberty /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_SEQ_RVT_FF_nldm_220123.lib
+read_db ./results/asap7/rv32imc_top/p900/3_2_place_iop.odb
+read_sdc ./results/asap7/rv32imc_top/p900/2_floorplan.sdc
+source /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/setRC.tcl
+[INFO RSZ-0026] Removed 1737 buffers.
+Perform port buffering...
+[INFO RSZ-0027] Inserted 65 BUFx2_ASAP7_75t_R input buffers.
+[INFO RSZ-0028] Inserted 164 BUFx2_ASAP7_75t_R output buffers.
+global_placement -density 0.6 -pad_left 0 -pad_right 0 -routability_driven -timing_driven -force_center_initial_place -min_phi_coef 0.95 -max_phi_coef 1.05
+[INFO GPL-0001] ---- Initialize GPL Main Data Structures
+[INFO GPL-0002] DBU: 1000
+[INFO GPL-0003] SiteSize: (  0.054  0.270 ) um
+[INFO GPL-0004] CoreBBox: (  2.052  2.160 ) ( 88.830 88.830 ) um
+[INFO GPL-0036] Movable instances area:       3315.682 um^2
+[INFO GPL-0037] Total instances area:         3348.516 um^2
+[INFO GPL-0035] Pin density area adjust:       258.839 um^2
+[INFO GPL-0032] ---- Initialize Region: Top-level
+[INFO GPL-0006] Number of instances:             30200
+[INFO GPL-0007] Movable instances:               29074
+[INFO GPL-0008] Fixed instances:                  1126
+[INFO GPL-0009] Dummy instances:                     0
+[INFO GPL-0010] Number of nets:                  32253
+[INFO GPL-0011] Number of pins:                  96087
+[INFO GPL-0012] Die BBox:  (  0.000  0.000 ) ( 90.870 90.870 ) um
+[INFO GPL-0013] Core BBox: (  2.052  2.160 ) ( 88.830 88.830 ) um
+[INFO GPL-0016] Core area:                    7521.049 um^2
+[INFO GPL-0014] Region name: top-level.
+[INFO GPL-0015] Region area:                  7521.049 um^2
+[INFO GPL-0017] Fixed instances area:           32.834 um^2
+[INFO GPL-0018] Movable instances area:       3574.520 um^2
+[INFO GPL-0019] Utilization:                    47.735 %
+[INFO GPL-0020] Standard cells area:          3574.520 um^2
+[INFO GPL-0021] Large instances area:            0.000 um^2
+[INFO GPL-0005] ---- Execute Conjugate Gradient Initial Placement.
+[INFO GPL-0051] Source of initial instance position counters:
+	Odb location = 0	Core center = 29074	Region center = 0
+[InitialPlace]  Iter: 1 conjugate gradient residual: 0.00282711 HPWL: 118786074
+[InitialPlace]  Iter: 2 conjugate gradient residual: 0.00030824 HPWL: 47024766
+[InitialPlace]  Iter: 3 conjugate gradient residual: 0.00058853 HPWL: 46114024
+[InitialPlace]  Iter: 4 conjugate gradient residual: 0.00042296 HPWL: 45987000
+[InitialPlace]  Iter: 5 conjugate gradient residual: 0.00045656 HPWL: 45497295
+[InitialPlace]  Iter: 6 conjugate gradient residual: 0.00029110 HPWL: 45193253
+[InitialPlace]  Iter: 7 conjugate gradient residual: 0.00017885 HPWL: 44881484
+[InitialPlace]  Iter: 8 conjugate gradient residual: 0.00013476 HPWL: 44785187
+[InitialPlace]  Iter: 9 conjugate gradient residual: 0.00004570 HPWL: 44668110
+[InitialPlace]  Iter: 10 conjugate gradient residual: 0.00007937 HPWL: 44677849
+[InitialPlace]  Iter: 11 conjugate gradient residual: 0.00002311 HPWL: 44616380
+[InitialPlace]  Iter: 12 conjugate gradient residual: 0.00003085 HPWL: 44630872
+[InitialPlace]  Iter: 13 conjugate gradient residual: 0.00001094 HPWL: 44570453
+[InitialPlace]  Iter: 14 conjugate gradient residual: 0.00001250 HPWL: 44597430
+[InitialPlace]  Iter: 15 conjugate gradient residual: 0.00001498 HPWL: 44550547
+[InitialPlace]  Iter: 16 conjugate gradient residual: 0.00001186 HPWL: 44576568
+[InitialPlace]  Iter: 17 conjugate gradient residual: 0.00000804 HPWL: 44522697
+[INFO GPL-0033] ---- Initialize Nesterov Region: Top-level
+[INFO GPL-0023] Placement target density:       0.6000
+[INFO GPL-0024] Movable insts average area:      0.123 um^2
+[INFO GPL-0025] Ideal bin area:                  0.205 um^2
+[INFO GPL-0026] Ideal bin count:                 36704
+[INFO GPL-0027] Total bin area:               7521.049 um^2
+[INFO GPL-0028] Bin count (X, Y):         128 ,    128
+[INFO GPL-0029] Bin size (W * H):       0.678 *  0.677 um
+[INFO GPL-0030] Number of bins:                  16384
+[INFO GPL-0084] ---- Execute Nesterov Global Placement.
+[INFO GPL-0031] HPWL: Half-Perimeter Wirelength
+Iteration | Overflow |     HPWL (um) |  HPWL(%) |   Penalty | Group
+---------------------------------------------------------------
+        0 |   0.9746 |  3.302207e+04 |   +0.00% |  1.33e-13 |      
+       10 |   0.9595 |  2.302194e+04 |  -30.28% |  2.17e-13 |      
+       20 |   0.9491 |  2.419223e+04 |   +5.08% |  3.53e-13 |      
+       30 |   0.9438 |  2.479633e+04 |   +2.50% |  5.75e-13 |      
+       40 |   0.9403 |  2.504787e+04 |   +1.01% |  9.37e-13 |      
+       50 |   0.9391 |  2.534708e+04 |   +1.19% |  1.53e-12 |      
+       60 |   0.9389 |  2.518521e+04 |   -0.64% |  2.49e-12 |      
+       70 |   0.9385 |  2.484676e+04 |   -1.34% |  4.05e-12 |      
+       80 |   0.9374 |  2.490544e+04 |   +0.24% |  6.59e-12 |      
+       90 |   0.9360 |  2.527182e+04 |   +1.47% |  1.07e-11 |      
+      100 |   0.9344 |  2.569450e+04 |   +1.67% |  1.75e-11 |      
+      110 |   0.9326 |  2.611562e+04 |   +1.64% |  2.85e-11 |      
+      120 |   0.9309 |  2.664931e+04 |   +2.04% |  4.64e-11 |      
+      130 |   0.9280 |  2.756574e+04 |   +3.44% |  7.56e-11 |      
+      140 |   0.9237 |  2.907963e+04 |   +5.49% |  1.23e-10 |      
+      150 |   0.9169 |  3.123251e+04 |   +7.40% |  2.01e-10 |      
+      160 |   0.9083 |  3.399724e+04 |   +8.85% |  3.27e-10 |      
+      170 |   0.8965 |  3.756150e+04 |  +10.48% |  5.32e-10 |      
+      180 |   0.8795 |  4.204830e+04 |  +11.95% |  8.66e-10 |      
+      190 |   0.8560 |  4.731744e+04 |  +12.53% |  1.41e-09 |      
+      200 |   0.8270 |  5.271743e+04 |  +11.41% |  2.29e-09 |      
+      210 |   0.7953 |  5.734853e+04 |   +8.78% |  3.73e-09 |      
+      220 |   0.7612 |  6.070243e+04 |   +5.85% |  6.08e-09 |      
+      230 |   0.7259 |  6.373902e+04 |   +5.00% |  9.90e-09 |      
+      240 |   0.6865 |  6.756836e+04 |   +6.01% |  1.61e-08 |      
+      250 |   0.6460 |  7.213302e+04 |   +6.76% |  2.62e-08 |      
+[INFO GPL-0100] Timing-driven iteration 1/2, virtual: false.
+[INFO GPL-0101]    Iter: 254, overflow: 0.635, keep resizer changes at: 1, HPWL: 73215110
+Iteration |   Area    | Resized | Buffers | Nets repaired | Remaining
+---------------------------------------------------------------------
+        0 |     +0.0% |       0 |       0 |             0 |     32253
+    final |     +2.5% |      75 |     273 |           100 |         0
+---------------------------------------------------------------------
+[INFO RSZ-0034] Found 97 slew violations.
+[INFO RSZ-0036] Found 36 capacitance violations.
+[INFO RSZ-0039] Resized 75 instances.
+[INFO RSZ-0038] Inserted 273 buffers in 100 nets.
+   Iter   |    Area   | Removed | Inserted |   Pins
+          |           | Buffers | Buffers  | Remaining
+-------------------------------------------------------
+        0 |     +0.0% |       0 |        0 |     31437
+     3100 |     +1.3% |      24 |      535 |     28337
+     6200 |     +1.8% |      30 |      764 |     25237
+     9300 |     +2.1% |      32 |      866 |     22137
+    12400 |     +2.2% |      72 |     1026 |     19037
+    15500 |     +2.1% |     152 |     1220 |     15937
+    18600 |     +2.2% |     156 |     1257 |     12837
+    21700 |     +1.9% |     214 |     1376 |      9737
+    24800 |     +2.5% |     233 |     1668 |      6637
+    27900 |     +3.7% |     242 |     2166 |      3537
+    31000 |     +6.5% |     261 |     3178 |       437
+    final |     +6.4% |     273 |     3187 |         0
+-------------------------------------------------------
+[INFO GPL-0106] Timing-driven: worst slack 5.065698e-12
+[INFO GPL-0107] Timing-driven: repair_design delta area: 300.627 um^2 (+8.41%)
+[INFO GPL-0108] Timing-driven: repair_design, gpl delta gcells: 3187 (+10.96%)
+[INFO GPL-0109] Timing-driven: repair_design, gcells created: 3460, deleted: 273
+[INFO GPL-0110] Timing-driven: new target density: 0.64014673
+Iteration | Overflow |     HPWL (um) |  HPWL(%) |   Penalty | Group
+---------------------------------------------------------------
+      260 |   0.6074 |  7.998568e+04 |  +10.89% |  4.27e-08 |      
+[INFO GPL-0038] Routability snapshot saved at iter = 264
+      263 |   0.5976 |  8.028023e+04 |          |           |      
+      270 |   0.5672 |  8.124099e+04 |   +1.57% |  6.96e-08 |      
+      280 |   0.5178 |  8.402956e+04 |   +3.43% |  1.13e-07 |      
+      290 |   0.4641 |  8.738647e+04 |   +3.99% |  1.84e-07 |      
+      300 |   0.4232 |  8.916486e+04 |   +2.04% |  3.00e-07 |      
+      310 |   0.3776 |  9.153558e+04 |   +2.66% |  4.89e-07 |      
+      320 |   0.3402 |  9.219400e+04 |   +0.72% |  7.89e-07 |      
+      330 |   0.3034 |  9.256725e+04 |   +0.40% |  1.16e-06 |      
+[INFO GPL-0040] Routability iteration: 1
+[WARNING GRT-0281] Net clk has a large fanout of 2242 terminals.
+[INFO GPL-0041] Total routing overflow: 0.0318
+[INFO GPL-0042] Number of overflowed tiles: 2 (0.01%)
+[INFO GPL-0043] Average top 0.5% routing congestion: 0.8073
+[INFO GPL-0044] Average top 1.0% routing congestion: 0.7747
+[INFO GPL-0045] Average top 2.0% routing congestion: 0.7393
+[INFO GPL-0046] Average top 5.0% routing congestion: 0.6901
+[INFO GPL-0047] Routability iteration weighted routing congestion: 0.7910
+[INFO GPL-0050] Weighted routing congestion is lower than target routing congestion(1.0100), end routability optimization.
+[INFO GPL-0090] Routability finished. Target routing congestion achieved succesfully.
+Iteration | Overflow |     HPWL (um) |  HPWL(%) |   Penalty | Group
+---------------------------------------------------------------
+      340 |   0.2812 |  9.274153e+04 |   +0.19% |  1.71e-06 |      
+      350 |   0.2528 |  9.291564e+04 |   +0.19% |  2.52e-06 |      
+      360 |   0.2276 |  9.216121e+04 |   -0.81% |  3.71e-06 |      
+      370 |   0.2033 |  9.198724e+04 |   -0.19% |  5.47e-06 |      
+[INFO GPL-0100] Timing-driven iteration 2/2, virtual: false.
+[INFO GPL-0101]    Iter: 375, overflow: 0.193, keep resizer changes at: 1, HPWL: 92010879
+Iteration |   Area    | Resized | Buffers | Nets repaired | Remaining
+---------------------------------------------------------------------
+        0 |     +0.0% |       0 |       0 |             0 |     35440
+    final |     +0.0% |       0 |       0 |             0 |         0
+---------------------------------------------------------------------
+   Iter   |    Area   | Removed | Inserted |   Pins
+          |           | Buffers | Buffers  | Remaining
+-------------------------------------------------------
+        0 |     +0.0% |       0 |        0 |     31437
+     3100 |     -0.8% |     535 |      211 |     28337
+     6200 |     -1.1% |     764 |      328 |     25237
+     9300 |     -1.3% |     866 |      364 |     22137
+    12400 |     -1.4% |    1026 |      459 |     19037
+    15500 |     -1.6% |    1220 |      576 |     15937
+    18600 |     -1.7% |    1257 |      591 |     12837
+    21700 |     -1.7% |    1376 |      696 |      9737
+    24800 |     -2.2% |    1668 |      802 |      6637
+    27900 |     -3.1% |    2166 |      892 |      3537
+    31000 |     -4.7% |    3178 |     1261 |       437
+    final |     -4.7% |    3187 |     1277 |         0
+-------------------------------------------------------
+[INFO GPL-0106] Timing-driven: worst slack -2.704581e-11
+[INFO GPL-0107] Timing-driven: repair_design delta area: -172.627 um^2 (-4.45%)
+[INFO GPL-0108] Timing-driven: repair_design, gpl delta gcells: -1910 (-5.92%)
+[INFO GPL-0109] Timing-driven: repair_design, gcells created: 1277, deleted: 3187
+[INFO GPL-0110] Timing-driven: new target density: 0.6170935
+Iteration | Overflow |     HPWL (um) |  HPWL(%) |   Penalty | Group
+---------------------------------------------------------------
+      380 |   0.1786 |  1.005750e+05 |   +9.34% |  8.05e-06 |      
+      390 |   0.1570 |  9.406304e+04 |   -6.47% |  1.19e-05 |      
+      400 |   0.1380 |  9.179887e+04 |   -2.41% |  1.75e-05 |      
+      410 |   0.1190 |  9.067445e+04 |   -1.22% |  2.57e-05 |      
+      420 |   0.1010 |  9.009279e+04 |   -0.64% |  3.79e-05 |      
+      421 |   0.0989 |  9.004640e+04 |          |  4.10e-05 |      
+---------------------------------------------------------------
+[INFO GPL-1001] Global placement finished at iteration 421
+[INFO GPL-1017] Routability mode iteration count: 68
+[INFO GPL-1005] Routability final weighted congestion: 0.7326
+[INFO GPL-1002] Placed Cell Area             3702.5205
+[INFO GPL-1003] Available Free Area          7488.2151
+[INFO GPL-1004] Minimum Feasible Density        0.4800 (cell_area / free_area)
+[INFO GPL-1006]   Suggested Target Densities:
+[INFO GPL-1007]     - For 90% usage of free space: 0.5494
+[INFO GPL-1008]     - For 80% usage of free space: 0.6181
+[INFO GPL-1009]     - For 50% usage of free space: 0.9889
+[INFO GPL-1011] Original area (um^2): 3574.52
+[INFO GPL-1012] Total routability artificial inflation: 0.00 (+0.00%)
+[INFO GPL-1013] Total timing-driven delta area: 128.00 (+3.58%)
+[INFO GPL-1014] Final placement area: 3702.52 (+3.58%)
+Took 84 seconds: global_placement -density 0.6 -pad_left 0 -pad_right 0 -routability_driven -timing_driven -force_center_initial_place -min_phi_coef 0.95 -max_phi_coef 1.05
+estimate_parasitics -placement
+Report metrics stage 3, global place...
+
+==========================================================================
+global place report_design_area
+--------------------------------------------------------------------------
+Design area 3478 um^2 46% utilization.
+write_db ./results/asap7/rv32imc_top/p900/3_3_place_gp.odb
+Elapsed time: 1:44.97[h:]min:sec. CPU time: user 105.38 sys 25.06 (124%). Peak memory: 733112KB.
+Log                       Ext     Elapsed/s Peak Memory/MB sha1sum result [0:20)
+3_3_place_gp              .odb          104            715 6de8605646dd1a83820c
+/home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/scripts/flow.sh 3_4_place_resized resize
+Running resize.tcl, stage 3_4_place_resized
+source /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/liberty_suppressions.tcl
+read_liberty /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_AO_RVT_FF_nldm_211120.lib.gz
+read_liberty /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_INVBUF_RVT_FF_nldm_220122.lib.gz
+read_liberty /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_OA_RVT_FF_nldm_211120.lib.gz
+read_liberty /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_SIMPLE_RVT_FF_nldm_211120.lib.gz
+read_liberty /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_SEQ_RVT_FF_nldm_220123.lib
+read_db ./results/asap7/rv32imc_top/p900/3_3_place_gp.odb
+read_sdc ./results/asap7/rv32imc_top/p900/2_floorplan.sdc
+source /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/setRC.tcl
+estimate_parasitics -placement
+Perform buffer insertion and gate resizing...
+repair_design -verbose
+Iteration |   Area    | Resized | Buffers | Nets repaired | Remaining
+---------------------------------------------------------------------
+        0 |     +0.0% |       0 |       0 |             0 |     33530
+     1000 |     +0.0% |       0 |       0 |             0 |     32530
+     2000 |     +0.0% |       0 |       0 |             0 |     31530
+     3000 |     +0.0% |       0 |       0 |             0 |     30530
+     4000 |     +0.0% |       0 |       0 |             0 |     29530
+     5000 |     +0.0% |       0 |       0 |             0 |     28530
+     6000 |     +0.0% |       0 |       0 |             0 |     27530
+     7000 |     +0.0% |       0 |       0 |             0 |     26530
+     8000 |     +0.0% |       0 |       0 |             0 |     25530
+     9000 |     +0.0% |       0 |       0 |             0 |     24530
+    10000 |     +0.0% |       0 |       0 |             0 |     23530
+    11000 |     +0.0% |       0 |       0 |             0 |     22530
+    12000 |     +0.0% |       0 |       0 |             0 |     21530
+    13000 |     +0.0% |       0 |       0 |             0 |     20530
+    14000 |     +0.0% |       0 |       0 |             0 |     19530
+    15000 |     +0.0% |       0 |       0 |             0 |     18530
+    16000 |     +0.0% |       0 |       0 |             0 |     17530
+    17000 |     +0.0% |       0 |       0 |             0 |     16530
+    18000 |     +0.0% |       0 |       0 |             0 |     15530
+    19000 |     +0.0% |       0 |       0 |             0 |     14530
+    20000 |     +0.0% |       0 |       0 |             0 |     13530
+    21000 |     +0.0% |       0 |       0 |             0 |     12530
+    22000 |     +0.0% |       0 |       0 |             0 |     11530
+    23000 |     +0.0% |       0 |       0 |             0 |     10530
+    24000 |     +0.0% |       0 |       0 |             0 |      9530
+    25000 |     +0.0% |       0 |       0 |             0 |      8530
+    26000 |     +0.0% |       0 |       0 |             0 |      7530
+    27000 |     +0.0% |       0 |       0 |             0 |      6530
+    28000 |     +0.0% |       0 |       0 |             0 |      5530
+    29000 |     +0.0% |       0 |       0 |             0 |      4530
+    30000 |     +0.0% |       0 |       0 |             0 |      3530
+    31000 |     +0.0% |       0 |       0 |             0 |      2530
+    32000 |     +0.0% |       0 |       0 |             0 |      1530
+    33000 |     +0.0% |       0 |       0 |             0 |       530
+    final |     +0.0% |       0 |       0 |             0 |         0
+---------------------------------------------------------------------
+Took 10 seconds: repair_design -verbose
+Floating nets: 
+Report metrics stage 3, resizer...
+
+==========================================================================
+resizer report_design_area
+--------------------------------------------------------------------------
+Design area 3478 um^2 46% utilization.
+Instance count before 31477, after 31477
+Pin count before 98409, after 98409
+write_db ./results/asap7/rv32imc_top/p900/3_4_place_resized.odb
+Elapsed time: 0:35.35[h:]min:sec. CPU time: user 32.82 sys 6.70 (111%). Peak memory: 349056KB.
+Log                       Ext     Elapsed/s Peak Memory/MB sha1sum result [0:20)
+3_4_place_resized         .odb           35            340 6de8605646dd1a83820c
+/home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/scripts/flow.sh 3_5_place_dp detail_place
+Running detail_place.tcl, stage 3_5_place_dp
+source /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/liberty_suppressions.tcl
+read_liberty /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_AO_RVT_FF_nldm_211120.lib.gz
+read_liberty /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_INVBUF_RVT_FF_nldm_220122.lib.gz
+read_liberty /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_OA_RVT_FF_nldm_211120.lib.gz
+read_liberty /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_SIMPLE_RVT_FF_nldm_211120.lib.gz
+read_liberty /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_SEQ_RVT_FF_nldm_220123.lib
+read_db ./results/asap7/rv32imc_top/p900/3_4_place_resized.odb
+read_sdc ./results/asap7/rv32imc_top/p900/2_floorplan.sdc
+source /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/setRC.tcl
+detailed_placement
+[INFO DPL-0006] Core area: 7521.05 um^2, Instances area: 3477.88 um^2, Utilization: 46.2%
+[INFO DPL-0005] Diamond search max displacement: +/- 500 sites horizontally, +/- 100 rows vertically.
+[INFO DPL-1101] Legalizing using diamond search.
+Movements Summary
+---------------------------------------
+Total cells:                   30351
+Diamond Move Success:          30351 (100.00%)
+Diamond Move Failure:              0
+Rip-up and replace Success:        0 (  0.00% of diamond failures)
+Rip-up and replace Failure:        0
+Total Placement Failures:          0
+---------------------------------------
+Placement Analysis
+---------------------------------
+total displacement       6386.5 u
+average displacement        0.2 u
+max displacement            0.9 u
+original HPWL           90075.6 u
+legalized HPWL          95096.9 u
+delta HPWL                    6 %
+
+improve_placement -max_displacement "5 1"
+Detailed placement improvement.
+[INFO DPL-0401] Setting random seed to 1.
+[INFO DPL-0402] Setting maximum displacement 5 1 to 1350 270 units.
+[INFO DPL-0320] Collected 1358 fixed cells.
+[INFO DPL-0318] Collected 30351 single height cells.
+[INFO DPL-0321] Collected 0 wide cells.
+[INFO DPL-0322] Image (2052, 2160) - (88830, 88830)
+[INFO DPL-0310] Assigned 30351 cells into segments.  Movement in X-direction is 0.000000, movement in Y-direction is 0.000000.
+[INFO DPL-0313] Found 0 cells in wrong regions.
+[INFO DPL-0315] Found 0 row alignment problems.
+[INFO DPL-0314] Found 0 site alignment problems.
+[INFO DPL-0311] Found 0 overlaps between adjacent cells.
+[INFO DPL-0312] Found 0 edge spacing violations and 0 padding violations.
+[INFO DPL-0303] Running algorithm for independent set matching.
+[INFO DPL-0300] Set matching objective is wirelength.
+[INFO DPL-0301] Pass   1 of matching; objective is 9.506664e+07.
+[INFO DPL-0302] End of matching; objective is 9.485087e+07, improvement is 0.23 percent.
+[INFO DPL-0303] Running algorithm for global swaps.
+[INFO DPL-0306] Pass   1 of global swaps; hpwl is 9.403549e+07.
+[INFO DPL-0307] End of global swaps; objective is 9.403549e+07, improvement is 0.86 percent.
+[INFO DPL-0303] Running algorithm for vertical swaps.
+[INFO DPL-0308] Pass   1 of vertical swaps; hpwl is 9.380754e+07.
+[INFO DPL-0309] End of vertical swaps; objective is 9.380754e+07, improvement is 0.24 percent.
+[INFO DPL-0303] Running algorithm for reordering.
+[INFO DPL-0304] Pass   1 of reordering; objective is 9.365823e+07.
+[INFO DPL-0305] End of reordering; objective is 9.365823e+07, improvement is 0.16 percent.
+[INFO DPL-0303] Running algorithm for random improvement.
+[INFO DPL-0324] Random improver is using random generator.
+[INFO DPL-0325] Random improver is using hpwl objective.
+[INFO DPL-0326] Random improver cost string is (a).
+[INFO DPL-0332] End of pass, Generator random called 607020 times.
+[INFO DPL-0335] Generator random, Cumulative attempts 607020, swaps 79526, moves 173238 since last reset.
+[INFO DPL-0333] End of pass, Objective hpwl, Initial cost 9.346124e+07, Scratch cost 9.283639e+07, Incremental cost 9.283639e+07, Mismatch? N
+[INFO DPL-0338] End of pass, Total cost is 9.283639e+07.
+[INFO DPL-0327] Pass   1 of random improver; improvement in cost is 0.67 percent.
+[INFO DPL-0328] End of random improver; improvement is 0.668558 percent.
+[INFO DPL-0380] Cell flipping.
+[INFO DPL-0382] Changed 0 cell orientations for row compatibility.
+[INFO DPL-0383] Performed 9484 cell flips.
+[INFO DPL-0384] End of flipping; objective is 9.148845e+07, improvement is 1.66 percent.
+[INFO DPL-0313] Found 0 cells in wrong regions.
+[INFO DPL-0315] Found 0 row alignment problems.
+[INFO DPL-0314] Found 0 site alignment problems.
+[INFO DPL-0311] Found 0 overlaps between adjacent cells.
+[INFO DPL-0312] Found 0 edge spacing violations and 0 padding violations.
+Detailed Improvement Results
+------------------------------------------
+Original HPWL            95096.9 u (   45102.6,    49994.3)
+Final HPWL               91395.5 u (   42834.2,    48561.3)
+Delta HPWL                  -3.9 % (      -5.0,       -2.9)
+
+Took 9 seconds: improve_placement -max_displacement "5 1"
+optimize_mirroring
+[INFO DPL-0020] Mirrored 5201 instances
+[INFO DPL-0021] HPWL before           91395.5 u
+[INFO DPL-0022] HPWL after            91238.8 u
+[INFO DPL-0023] HPWL delta               -0.2 %
+[INFO FLW-0012] Placement violations .
+estimate_parasitics -placement
+Report metrics stage 3, detailed place...
+
+==========================================================================
+detailed place report_design_area
+--------------------------------------------------------------------------
+Design area 3478 um^2 46% utilization.
+write_db ./results/asap7/rv32imc_top/p900/3_5_place_dp.odb
+write_sdc -no_timestamp ./results/asap7/rv32imc_top/p900/3_place.sdc
+Elapsed time: 0:40.07[h:]min:sec. CPU time: user 37.05 sys 6.48 (108%). Peak memory: 398164KB.
+Log                       Ext     Elapsed/s Peak Memory/MB sha1sum result [0:20)
+3_5_place_dp              .odb           40            388 b96f4e99768706d631a9
+cp ./results/asap7/rv32imc_top/p900/3_5_place_dp.odb ./results/asap7/rv32imc_top/p900/3_place.odb
+/home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/scripts/flow.sh 4_1_cts cts
+Running cts.tcl, stage 4_1_cts
+source /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/liberty_suppressions.tcl
+read_liberty /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_AO_RVT_FF_nldm_211120.lib.gz
+read_liberty /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_INVBUF_RVT_FF_nldm_220122.lib.gz
+read_liberty /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_OA_RVT_FF_nldm_211120.lib.gz
+read_liberty /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_SIMPLE_RVT_FF_nldm_211120.lib.gz
+read_liberty /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_SEQ_RVT_FF_nldm_220123.lib
+read_db ./results/asap7/rv32imc_top/p900/3_place.odb
+read_sdc ./results/asap7/rv32imc_top/p900/3_place.sdc
+source /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/setRC.tcl
+clock_tree_synthesis -sink_clustering_enable -repair_clock_nets
+[INFO CTS-0050] Root buffer is BUFx16f_ASAP7_75t_R.
+[INFO CTS-0051] Sink buffer is BUFx24_ASAP7_75t_R.
+[INFO CTS-0052] The following clock buffers will be used for CTS:
+                    BUFx16f_ASAP7_75t_R
+                    BUFx24_ASAP7_75t_R
+[INFO CTS-0049] Characterization buffer is BUFx24_ASAP7_75t_R.
+[INFO CTS-0007] Net "clk" found for clock "core_clk".
+[INFO CTS-0010]  Clock net "clk" has 2241 sinks.
+[INFO CTS-0008] TritonCTS found 1 clock nets.
+[INFO CTS-0097] Characterization used 2 buffer(s) types.
+[INFO CTS-0201] 0 blockages from hard placement blockages and placed macros will be used.
+[INFO CTS-0027] Generating H-Tree topology for net clk.
+[INFO CTS-0028]  Total number of sinks: 2241.
+[INFO CTS-0090]  Sinks will be clustered based on buffer max cap.
+[INFO CTS-0030]  Number of static layers: 0.
+[INFO CTS-0020]  Wire segment unit: 1350  dbu (1 um).
+[INFO CTS-0206] Best clustering solution was found from max clustering size of 24 and max clustering diameter of 27.
+[INFO CTS-0019]  Total number of sinks after clustering: 119.
+[INFO CTS-0024]  Normalized sink region: [(3.1163, 2.7), (61.5407, 64.1761)].
+[INFO CTS-0025]     Width:  58.4244.
+[INFO CTS-0026]     Height: 61.4761.
+ Level 1
+    Direction: Vertical
+    Sinks per sub-region: 60
+    Sub-region size: 58.4244 X 30.7381
+[INFO CTS-0034]     Segment length (rounded): 16.
+ Level 2
+    Direction: Horizontal
+    Sinks per sub-region: 30
+    Sub-region size: 29.2122 X 30.7381
+[INFO CTS-0034]     Segment length (rounded): 14.
+ Level 3
+    Direction: Vertical
+    Sinks per sub-region: 15
+    Sub-region size: 29.2122 X 15.3690
+[INFO CTS-0034]     Segment length (rounded): 8.
+ Level 4
+    Direction: Horizontal
+    Sinks per sub-region: 8
+    Sub-region size: 14.6061 X 15.3690
+[INFO CTS-0034]     Segment length (rounded): 8.
+[INFO CTS-0032]  Stop criterion found. Max number of sinks is 15.
+[INFO CTS-0035]  Number of sinks covered: 119.
+[INFO CTS-0018]     Created 140 clock buffers.
+[INFO CTS-0012]     Minimum number of buffers in the clock path: 4.
+[INFO CTS-0013]     Maximum number of buffers in the clock path: 4.
+[INFO CTS-0015]     Created 140 clock nets.
+[INFO CTS-0016]     Fanout distribution for the current clock = 3:1, 4:2, 5:1, 6:3, 7:3, 8:3, 9:5, 10:3, 11:1, 13:1, 14:1, 15:3, 16:4, 17:7, 18:14, 19:19, 20:29, 21:26, 22:7, 23:1, 24:1..
+[INFO CTS-0017]     Max level of the clock tree: 4.
+[INFO CTS-0098] Clock net "clk"
+[INFO CTS-0099]  Sinks 2350
+[INFO CTS-0100]  Leaf buffers 119
+[INFO CTS-0101]  Average sink wire length 148.46 um
+[INFO CTS-0102]  Path depth 3 - 4
+[INFO CTS-0207]  Dummy loads inserted 109
+Took 11 seconds: clock_tree_synthesis -sink_clustering_enable -repair_clock_nets
+estimate_parasitics -placement
+detailed_placement
+[INFO DPL-0006] Core area: 7521.05 um^2, Instances area: 3554.98 um^2, Utilization: 47.3%
+[INFO DPL-0005] Diamond search max displacement: +/- 500 sites horizontally, +/- 100 rows vertically.
+[INFO DPL-1101] Legalizing using diamond search.
+Movements Summary
+---------------------------------------
+Total cells:                   30600
+Diamond Move Success:          30600 (100.00%)
+Diamond Move Failure:              0
+Rip-up and replace Success:        0 (  0.00% of diamond failures)
+Rip-up and replace Failure:        0
+Total Placement Failures:          0
+---------------------------------------
+Placement Analysis
+---------------------------------
+total displacement        299.9 u
+average displacement        0.0 u
+max displacement            1.1 u
+original HPWL           93437.1 u
+legalized HPWL          95499.7 u
+delta HPWL                    2 %
+
+estimate_parasitics -placement
+repair_timing -setup_margin 0 -hold_margin 0 -repair_tns 100 -verbose
+[INFO RSZ-0100] Repair move sequence: UnbufferMove SizeUpMove SwapPinsMove BufferMove CloneMove SplitLoadMove 
+[INFO RSZ-0094] Found 12 endpoints with setup violations.
+[INFO RSZ-0099] Repairing 12 out of 12 (100.00%) violating endpoints...
+   Iter   | Removed | Resized | Inserted | Cloned |  Pin  |   Area   |    WNS   |   StTNS    |   EnTNS    |  Viol  |  Worst  
+          | Buffers |  Gates  | Buffers  |  Gates | Swaps |          |          |            |            | Endpts | St/EnPt 
+------------------------------------------------------------------------------------------------------------------------------
+       0* |       0 |       0 |        0 |      0 |     0 |    +0.0% |  -14.224 |      -41.5 |      -59.8 |     12 | u_mul.result\[17\]$_DFFE_PN0P_/D
+       3* |       0 |       0 |        2 |      0 |     1 |    +0.0% |   -5.264 |      -20.5 |      -27.8 |     12 | u_mul.result\[25\]$_DFFE_PN0P_/D
+       6* |       0 |       0 |        3 |      0 |     2 |    +0.0% |   -4.981 |      -18.0 |      -17.3 |     12 | u_mul.result\[20\]$_DFFE_PN0P_/D
+       7* |       0 |       0 |        3 |      0 |     2 |    +0.0% |   -4.981 |      -18.0 |      -17.3 |     12 | u_mul.result\[20\]$_DFFE_PN0P_/D
+       8* |       0 |       0 |        3 |      0 |     2 |    +0.0% |   -4.981 |      -18.0 |      -17.3 |     12 | u_mul.result\[20\]$_DFFE_PN0P_/D
+      10* |       0 |       0 |        3 |      0 |     3 |    +0.0% |   -6.857 |      -19.9 |      -19.2 |     12 | u_mul.result\[20\]$_DFFE_PN0P_/D
+      13* |       0 |       0 |        5 |      0 |     4 |    +0.0% |   -4.037 |       -8.1 |      -12.4 |     12 | u_mul.result\[24\]$_DFFE_PN0P_/D
+      16* |       0 |       0 |        7 |      0 |     5 |    +0.0% |   -3.450 |       -7.0 |       -7.0 |     12 | u_mul.result\[28\]$_DFFE_PN0P_/D
+      19* |       0 |       0 |        8 |      0 |     6 |    +0.0% |   -0.331 |       -0.3 |       -0.3 |     12 | u_mul.result\[16\]$_DFFE_PN0P_/D
+      20* |       0 |       0 |        8 |      0 |     6 |    +0.0% |   -0.331 |       -0.3 |       -0.3 |     12 | u_mul.result\[16\]$_DFFE_PN0P_/D
+      20* |       0 |       0 |        8 |      0 |     6 |    +0.0% |   -0.331 |       -0.3 |       -0.3 |     12 | u_mul.result\[16\]$_DFFE_PN0P_/D
+      21* |       0 |       0 |        8 |      0 |     6 |    +0.0% |   -0.331 |       -0.3 |       -0.3 |     12 | u_mul.result\[16\]$_DFFE_PN0P_/D
+      22* |       0 |       0 |        8 |      0 |     6 |    +0.0% |   -0.331 |       -0.3 |       -0.3 |     12 | u_mul.result\[16\]$_DFFE_PN0P_/D
+      24* |       0 |       0 |       10 |      0 |     6 |    +0.0% |    0.740 |        0.0 |        0.0 |     12 | u_mul.result\[17\]$_DFFE_PN0P_/D
+      25* |       0 |       0 |       10 |      0 |     6 |    +0.0% |    0.740 |        0.0 |        0.0 |     12 | u_mul.result\[17\]$_DFFE_PN0P_/D
+      25* |       0 |       0 |       10 |      0 |     6 |    +0.0% |    0.740 |        0.0 |        0.0 |     12 | u_mul.result\[17\]$_DFFE_PN0P_/D
+    final |       0 |       0 |       10 |      0 |     6 |    +0.0% |    0.740 |        0.0 |        0.0 |      0 | u_mul.result\[17\]$_DFFE_PN0P_/D
+------------------------------------------------------------------------------------------------------------------------------
+[INFO RSZ-0040] Inserted 10 buffers.
+[INFO RSZ-0043] Swapped pins on 6 instances.
+[INFO RSZ-0046] Found 109 endpoints with hold violations.
+Iteration | Resized | Buffers | Cloned Gates |   Area   |   WNS   |   TNS   | Endpoint
+--------------------------------------------------------------------------------------
+        0 |       0 |       0 |            0 |    +0.0% | -96.992 | -7599.301 | mem_rdata0[16]$_DFFE_PN0P_/D
+       10 |       0 |      27 |            0 |    +0.1% | -93.938 | -7222.880 | mem_rdata0[3]$_DFFE_PN0P_/D
+       20 |       0 |      57 |            0 |    +0.1% | -92.394 | -6626.955 | mem_rdata0[24]$_DFFE_PN0P_/D
+       30 |       0 |      87 |            0 |    +0.2% | -90.369 | -5963.450 | mem_rdata0[31]$_DFFE_PN0P_/D
+       40 |       0 |     122 |            0 |    +0.3% | -87.548 | -5459.606 | if_id_instr[10]$_DFFE_PN0P_/D
+       50 |       0 |     165 |            0 |    +0.3% | -86.317 | -5023.727 | if_id_instr[29]$_DFFE_PN0P_/D
+       60 |       0 |     208 |            0 |    +0.4% | -78.811 | -4460.027 | fbuf[10]$_DFFE_PN0P_/D
+       70 |       0 |     279 |            0 |    +0.6% | -78.122 | -3817.383 | fbuf[15]$_DFFE_PN0P_/D
+       80 |       0 |     355 |            0 |    +0.7% | -60.323 | -3098.701 | mem_rdata0[16]$_DFFE_PN0P_/D
+       90 |       0 |     406 |            0 |    +0.8% | -60.323 | -2459.937 | mem_rdata0[16]$_DFFE_PN0P_/D
+      100 |       0 |     445 |            0 |    +0.9% | -58.712 | -1989.957 | mem_rdata0[29]$_DFFE_PN0P_/D
+      110 |       0 |     480 |            0 |    +1.0% | -58.418 | -1618.631 | mem_rdata0[28]$_DFFE_PN0P_/D
+      110 |       0 |     480 |            0 |    +1.0% | -58.418 | -1618.631 | mem_rdata0[28]$_DFFE_PN0P_/D
+      120 |       0 |     534 |            0 |    +1.1% | -50.515 | -778.103 | mem_rdata0[31]$_DFFE_PN0P_/D
+      130 |       0 |     575 |            0 |    +1.2% | -28.171 | -329.675 | if_id_instr[25]$_DFFE_PN0P_/D
+      140 |       0 |     585 |            0 |    +1.2% | -18.614 | -220.288 | mem_rdata0[30]$_DFFE_PN0P_/D
+      150 |       0 |     595 |            0 |    +1.2% |  -8.629 | -131.852 | mem_rdata0[2]$_DFFE_PN0P_/D
+      160 |       0 |     600 |            0 |    +1.2% |  -6.799 | -92.354 | mem_rdata0[24]$_DFFE_PN0P_/D
+      170 |       0 |     609 |            0 |    +1.2% |  -5.706 | -35.700 | mem_rdata0[20]$_DFFE_PN0P_/D
+      180 |       0 |     616 |            0 |    +1.3% |  -3.063 |  -3.063 | mem_rdata0[15]$_DFFE_PN0P_/D
+    final |       0 |     617 |            0 |    +1.3% |   0.487 |   0.000 | mem_rdata0[11]$_DFFE_PN0P_/D
+--------------------------------------------------------------------------------------
+[INFO RSZ-0032] Inserted 617 hold buffers.
+Took 15 seconds: repair_timing -setup_margin 0 -hold_margin 0 -repair_tns 100 -verbose
+detailed_placement
+[INFO DPL-0006] Core area: 7521.05 um^2, Instances area: 3600.84 um^2, Utilization: 47.9%
+[INFO DPL-0005] Diamond search max displacement: +/- 500 sites horizontally, +/- 100 rows vertically.
+[INFO DPL-1101] Legalizing using diamond search.
+Movements Summary
+---------------------------------------
+Total cells:                   31227
+Diamond Move Success:          31227 (100.00%)
+Diamond Move Failure:              0
+Rip-up and replace Success:        0 (  0.00% of diamond failures)
+Rip-up and replace Failure:        0
+Total Placement Failures:          0
+---------------------------------------
+Placement Analysis
+---------------------------------
+total displacement        275.5 u
+average displacement        0.0 u
+max displacement            1.1 u
+original HPWL           95718.1 u
+legalized HPWL          95896.7 u
+delta HPWL                    0 %
+
+estimate_parasitics -placement
+Report metrics stage 4, cts final...
+
+==========================================================================
+cts final report_design_area
+--------------------------------------------------------------------------
+Design area 3601 um^2 48% utilization.
+write_db ./results/asap7/rv32imc_top/p900/4_1_cts.odb
+write_sdc -no_timestamp ./results/asap7/rv32imc_top/p900/4_cts.sdc
+Elapsed time: 1:09.19[h:]min:sec. CPU time: user 62.14 sys 21.91 (121%). Peak memory: 537724KB.
+Log                       Ext     Elapsed/s Peak Memory/MB sha1sum result [0:20)
+4_1_cts                   .odb           69            525 e96a899cb98133b5b563
+cp ./results/asap7/rv32imc_top/p900/4_1_cts.odb ./results/asap7/rv32imc_top/p900/4_cts.odb
+/home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/scripts/flow.sh 5_1_grt global_route
+Running global_route.tcl, stage 5_1_grt
+source /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/liberty_suppressions.tcl
+read_liberty /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_AO_RVT_FF_nldm_211120.lib.gz
+read_liberty /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_INVBUF_RVT_FF_nldm_220122.lib.gz
+read_liberty /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_OA_RVT_FF_nldm_211120.lib.gz
+read_liberty /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_SIMPLE_RVT_FF_nldm_211120.lib.gz
+read_liberty /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_SEQ_RVT_FF_nldm_220123.lib
+read_db ./results/asap7/rv32imc_top/p900/4_cts.odb
+read_sdc ./results/asap7/rv32imc_top/p900/4_cts.sdc
+source /home/hatch/workspace/rv32imc-cpu/tools/orfs/flow/platforms/asap7/setRC.tcl
+pin_access
+[INFO DRT-0149] Reading tech and libs.
+
+Units:                1000
+Number of layers:     21
+Number of macros:     212
+Number of vias:       14
+Number of viarulegen: 11
+
+[INFO DRT-0150] Reading design.
+[WARNING DRT-0120] Large net net5423 has 110 pins which may impact routing performance. Consider optimization.
+
+Design:                   rv32imc_top
+Die area:                 ( 0 0 ) ( 90870 90870 )
+Number of track patterns: 32
+Number of DEF vias:       0
+Number of components:     32353
+Number of terminals:      234
+Number of snets:          2
+Number of nets:           34297
+
+[INFO DRT-0167] List of default vias:
+  Layer V2
+    default via: VIA23
+  Layer V3
+    default via: VIA34
+  Layer V4
+    default via: VIA45
+  Layer V5
+    default via: VIA56
+  Layer V6
+    default via: VIA67
+  Layer V7
+    default via: VIA78
+  Layer V8
+    default via: VIA89
+  Layer V9
+    default via: VIA9Pad
+[INFO DRT-0162] Library cell analysis.
+[INFO DRT-0163] Instance analysis.
+[INFO DRT-0164] Number of unique instances = 225.
+[INFO DRT-0168] Init region query.
+[INFO DRT-0024]   Complete Active.
+[INFO DRT-0024]   Complete V0.
+[INFO DRT-0024]   Complete M1.
+[INFO DRT-0024]   Complete V1.
+[INFO DRT-0024]   Complete M2.
+[INFO DRT-0024]   Complete V2.
+[INFO DRT-0024]   Complete M3.
+[INFO DRT-0024]   Complete V3.
+[INFO DRT-0024]   Complete M4.
+[INFO DRT-0024]   Complete V4.
+[INFO DRT-0024]   Complete M5.
+[INFO DRT-0024]   Complete V5.
+[INFO DRT-0024]   Complete M6.
+[INFO DRT-0024]   Complete V6.
+[INFO DRT-0024]   Complete M7.
+[INFO DRT-0024]   Complete V7.
+[INFO DRT-0024]   Complete M8.
+[INFO DRT-0024]   Complete V8.
+[INFO DRT-0024]   Complete M9.
+[INFO DRT-0024]   Complete V9.
+[INFO DRT-0024]   Complete Pad.
+[INFO DRT-0033] Active shape region query size = 0.
+[INFO DRT-0033] V0 shape region query size = 0.
+[INFO DRT-0033] M1 shape region query size = 527663.
+[INFO DRT-0033] V1 shape region query size = 830306.
+[INFO DRT-0033] M2 shape region query size = 25563.
+[INFO DRT-0033] V2 shape region query size = 15939.
+[INFO DRT-0033] M3 shape region query size = 15939.
+[INFO DRT-0033] V3 shape region query size = 10626.
+[INFO DRT-0033] M4 shape region query size = 10716.
+[INFO DRT-0033] V4 shape region query size = 10626.
+[INFO DRT-0033] M5 shape region query size = 6016.
+[INFO DRT-0033] V5 shape region query size = 1056.
+[INFO DRT-0033] M6 shape region query size = 592.
+[INFO DRT-0033] V6 shape region query size = 0.
+[INFO DRT-0033] M7 shape region query size = 0.
+[INFO DRT-0033] V7 shape region query size = 0.
+[INFO DRT-0033] M8 shape region query size = 0.
+[INFO DRT-0033] V8 shape region query size = 0.
+[INFO DRT-0033] M9 shape region query size = 0.
+[INFO DRT-0033] V9 shape region query size = 0.
+[INFO DRT-0033] Pad shape region query size = 0.
+[INFO DRT-0165] Start pin access.
+[INFO DRT-0076]   Complete 1000 pins.
+[INFO DRT-0078]   Complete 1242 pins.
+[INFO DRT-0079]   Complete 100 unique inst patterns.
+[INFO DRT-0079]   Complete 200 unique inst patterns.
+[INFO DRT-0081]   Complete 225 unique inst patterns.
+make[1]: *** [Makefile:613: do-5_1_grt] Terminated
+make: *** [Makefile:631: do-grt] Terminated

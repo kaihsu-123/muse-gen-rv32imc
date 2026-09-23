@@ -1,0 +1,9 @@
+WARNING: /home/hatch/workspace/rv32imc-cpu/verify/d0_tests/../tb/tb_rv32imc.v:222: $readmemh(/home/hatch/workspace/rv32imc-cpu/verify/d0_tests/build/dtest_wait_soc/test_wait_soc.hex): Not enough words in the file for the requested range [0:32767].
+[TB] loaded program: /home/hatch/workspace/rv32imc-cpu/verify/d0_tests/build/dtest_wait_soc/test_wait_soc.hex
+[TB] tohost addr   : 0x00001040
+[TB] timeout cycles: 5000000
+[TB] REPORT id=3 value=20 (0x000014)
+[TB] REPORT id=3 value=84 (0x000054)
+[TB] REPORT id=4 value=5921370 (0x5a5a5a)
+[TB] RESULT: PASS  after 212 cycles
+/home/hatch/workspace/rv32imc-cpu/verify/d0_tests/../tb/tb_rv32imc.v:244: $finish called at 2315000 (1ps)

@@ -1,0 +1,50 @@
+== compiling sim ==
+test_wait_mix [base] -> [TB] RESULT: PASS  after 3522 cycles
+test_wait_mix [imem] -> [TB] RESULT: PASS  after 3845 cycles
+test_wait_mix [dmem] -> [TB] RESULT: PASS  after 3584 cycles
+test_wait_mix [both] -> [TB] RESULT: PASS  after 3894 cycles
+test_wait_misp [win] -> [TB] RESULT: PASS  after 38 cycles
+test_wait_loaduse [dmem] -> [TB] RESULT: PASS  after 32 cycles
+test_irq_timer [timer] -> [TB] RESULT: PASS  after 213 cycles
+test_irq_prio [prio] -> [TB] RESULT: PASS  after 134 cycles
+test_irq_mask [mask] -> [TB] RESULT: PASS  after 1640 cycles
+test_pred_alive [alive] -> [TB] RESULT: PASS  after 2048 cycles
+== checking ==
+PASS wait_mix[base] RESULT=PASS  [PASS]
+PASS wait_mix[imem] RESULT=PASS  [PASS]
+PASS wait_mix[dmem] RESULT=PASS  [PASS]
+PASS wait_mix[both] RESULT=PASS  [PASS]
+PASS wait_mix checksum identical (base/imem/dmem/both)  [0x00000000]
+PASS wait_misp: redirect survives imem_wait window  [PASS]
+PASS wait_loaduse: RESULT=PASS  [PASS]
+PASS wait_loaduse: forwarded value exact  [t2=0x00345679 xor=1]
+PASS irq_timer: RESULT=PASS  [PASS]
+PASS irq_timer: main counter == 30 (no lost/dup retire)  [t2=30]
+PASS irq_timer: exactly 1 take  [takes=1]
+PASS irq_prio: RESULT=PASS (MEI>MSI>MTI order)  [PASS]
+PASS irq_prio: 3 takes  [takes=3]
+PASS irq_mask: RESULT=PASS (never taken while masked)  [PASS]
+PASS pred_alive: RESULT=PASS  [PASS]
+PASS pred_alive: 1000 branches resolved  [br=1000]
+PASS pred_alive: mispredicts <= 10 (expect 2)  [mp=2]
+PASS pred_alive: cycles < 3000 (predictions helping)  [cyc=2006]
+RUNNER_EXIT=0
+PASS wait_mix[base] RESULT=PASS  [PASS]
+PASS wait_mix[imem] RESULT=PASS  [PASS]
+PASS wait_mix[dmem] RESULT=PASS  [PASS]
+PASS wait_mix[both] RESULT=PASS  [PASS]
+PASS wait_mix checksum identical (base/imem/dmem/both)  [0x00000000]
+PASS wait_misp: redirect survives imem_wait window  [PASS]
+PASS wait_loaduse: RESULT=PASS  [PASS]
+PASS wait_loaduse: forwarded value exact  [t2=0x00345679 xor=1]
+PASS irq_timer: RESULT=PASS  [PASS]
+PASS irq_timer: main counter == 30 (no lost/dup retire)  [t2=30]
+PASS irq_timer: exactly 1 take  [takes=1]
+PASS irq_prio: RESULT=PASS (MEI>MSI>MTI order)  [PASS]
+PASS irq_prio: 3 takes  [takes=3]
+PASS irq_mask: RESULT=PASS (never taken while masked)  [PASS]
+PASS pred_alive: RESULT=PASS  [PASS]
+PASS pred_alive: 1000 branches resolved  [br=1000]
+PASS pred_alive: mispredicts <= 10 (expect 2)  [mp=2]
+PASS pred_alive: cycles < 3000 (predictions helping)  [cyc=2006]
+CHECKER_EXIT=0

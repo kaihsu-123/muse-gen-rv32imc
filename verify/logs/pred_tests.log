@@ -1,0 +1,37 @@
+== compiling sim ==
+== test_a ==
+[TB] REPORT id=1 value=100 (0x000064)
+[TB] REPORT id=2 value=2 (0x000002)
+[TB] REPORT id=3 value=0 (0x000000)
+[TB] RESULT: PASS  after 236 cycles
+== test_b ==
+[TB] REPORT id=1 value=200 (0x0000c8)
+[TB] REPORT id=2 value=2 (0x000002)
+[TB] REPORT id=3 value=0 (0x000000)
+[TB] RESULT: PASS  after 336 cycles
+== test_c ==
+[TB] REPORT id=1 value=400 (0x000190)
+[TB] REPORT id=2 value=202 (0x0000ca)
+[TB] REPORT id=3 value=100 (0x000064)
+[TB] RESULT: PASS  after 1337 cycles
+== test_d ==
+[TB] REPORT id=1 value=210 (0x0000d2)
+[TB] REPORT id=2 value=13 (0x00000d)
+[TB] REPORT id=3 value=0 (0x000000)
+[TB] RESULT: PASS  after 489 cycles
+== test_e ==
+[TB] REPORT id=1 value=25 (0x000019)
+[TB] REPORT id=2 value=13 (0x00000d)
+[TB] REPORT id=3 value=0 (0x000000)
+[TB] RESULT: PASS  after 108 cycles
+== test_f ==
+[TB] REPORT id=1 value=3 (0x000003)
+[TB] REPORT id=2 value=4 (0x000004)
+[TB] REPORT id=3 value=1 (0x000001)
+[TB] RESULT: PASS  after 48 cycles
+== test_g ==
+[TB] REPORT id=1 value=8 (0x000008)
+[TB] REPORT id=2 value=5 (0x000005)
+[TB] REPORT id=3 value=0 (0x000000)
+[TB] RESULT: PASS  after 76 cycles
+EXIT=0

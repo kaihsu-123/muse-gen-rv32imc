@@ -1,0 +1,4 @@
+name=coremark
+tohost=0x00007000
+words=7169
+bytes=28676

@@ -1,0 +1,21 @@
+WARNING: /home/hatch/workspace/rv32imc-cpu/verify/coremark/../tb/tb_rv32imc.v:192: $readmemh(/home/hatch/workspace/rv32imc-cpu/verify/coremark/build_o3/coremark.hex): Not enough words in the file for the requested range [0:32767].
+[TB] loaded program: /home/hatch/workspace/rv32imc-cpu/verify/coremark/build_o3/coremark.hex
+[TB] tohost addr   : 0x00007000
+[TB] timeout cycles: 20000000
+[TB] REPORT id=1 value=42579 (0x00a653)
+[TB] REPORT id=2 value=66 (0x000042)
+[TB] REPORT id=3 value=38440 (0x009628)
+[TB] REPORT id=4 value=44 (0x00002c)
+[TB] REPORT id=12 value=2866 (0x000b32)
+[TB] REPORT id=13 value=9 (0x000009)
+[TB] REPORT id=14 value=28074 (0x006daa)
+[TB] REPORT id=15 value=3 (0x000003)
+[TB] REPORT id=5 value=10 (0x00000a)
+[TB] REPORT id=6 value=1 (0x000001)
+[TB] REPORT id=11 value=1 (0x000001)
+[TB] REPORT id=7 value=10905 (0x002a99)
+[TB] REPORT id=8 value=67 (0x000043)
+[TB] REPORT id=9 value=59619 (0x00e8e3)
+[TB] REPORT id=10 value=44 (0x00002c)
+[TB] RESULT: PASS  after 4406852 cycles
+/home/hatch/workspace/rv32imc-cpu/verify/coremark/../tb/tb_rv32imc.v:214: $finish called at 44068715000 (1ps)

@@ -1,0 +1,48 @@
+# ---------------------------------------------------------------------------
+# constraint.sdc - timing constraints for rv32imc_top on ASAP7
+#
+# *** ALL TIME VALUES ARE IN PICOSECONDS ***
+# The ASAP7 liberty views use time_unit = 1ps, so create_clock periods,
+# uncertainties and IO delays must be written in ps (unlike Sky130 where
+# the liberty time unit is 1ns).
+#
+# 675 is therefore in ps: 667 ps = 1.50 GHz.
+#
+# Matches the Astra RV5 comparison basis: 20 ps clock uncertainty.
+# IO timing is budgeted as a fraction of the clock period so the constraint
+# tracks CLOCK_PERIOD automatically.
+# ---------------------------------------------------------------------------
+
+current_design rv32imc_top
+
+# Clock --------------------------------------------------------------------
+set clk_period 675
+set clk_port   [get_ports $::env(CLOCK_PORT)]
+create_clock -name core_clk -period $clk_period $clk_port
+set_clock_uncertainty -setup 20.0 [get_clocks core_clk]
+set_clock_uncertainty -hold  10.0 [get_clocks core_clk]
+set_clock_transition 20.0 [get_clocks core_clk]
+
+# IO budget: 25% of period in, 25% out --------------------------------------
+# The core talks to external instruction/data SRAMs over single-cycle
+# combinational-read buses. The clock port and async reset are excluded
+# from data-IO constraints.
+set io_pct 0.25
+set in_delay  [expr {$clk_period * $io_pct}]
+set out_delay [expr {$clk_period * $io_pct}]
+
+set data_inputs [get_ports {imem_rdata[*] dmem_rdata[*]}]
+
+set_input_delay  -clock core_clk -max $in_delay  $data_inputs
+set_input_delay  -clock core_clk -min 0.0        $data_inputs
+set_output_delay -clock core_clk -max $out_delay [all_outputs]
+set_output_delay -clock core_clk -min 0.0       [all_outputs]
+
+# Driving cell / load: ASAP7 RVT buffer, modest load ------------------------
+# (capacitive_load_unit in these libs is 1 fF)
+set_driving_cell -lib_cell BUFx4_ASAP7_75t_R $data_inputs
+set_load 0.005 [all_outputs]
+
+# Async reset: not part of the synchronous timing budget --------------------
+set_false_path -from [get_ports rst_n]
+set_ideal_network [get_ports rst_n]
